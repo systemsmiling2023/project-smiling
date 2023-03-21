@@ -1,0 +1,232 @@
+CRITICAL - 2023-02-28 02:41:43 --> Non-static method App\Models\Login::validarDatos() cannot be called statically
+in APPPATH/Controllers/LoginController.php on line 12.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:23:51 --> Undefined variable $usuarios
+in APPPATH/Views/login.php on line 56.
+ 1 APPPATH/Views/login.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'APPPATH/Views/login.php', 56)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/login.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('login')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:27:03 --> Undefined variable $usuarios
+in APPPATH/Views/login.php on line 56.
+ 1 APPPATH/Views/login.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $usuarios', 'APPPATH/Views/login.php', 56)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/login.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('login')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:32:38 --> Undefined variable $hola
+in APPPATH/Views/login.php on line 27.
+ 1 APPPATH/Views/login.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hola', 'APPPATH/Views/login.php', 27)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/login.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('login')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:32:49 --> Undefined variable $hola
+in APPPATH/Views/login.php on line 27.
+ 1 APPPATH/Views/login.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hola', 'APPPATH/Views/login.php', 27)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/login.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('login')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:33:39 --> Undefined variable $hola
+in APPPATH/Views/login.php on line 27.
+ 1 APPPATH/Views/login.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $hola', 'APPPATH/Views/login.php', 27)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/login.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('login', [], true)
+ 5 APPPATH/Controllers/Home.php(9): view('login')
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\Home->index()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:39:15 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:40:36 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:40:37 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:40:37 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:40:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:40:38 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:27 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:28 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:42:29 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:43:45 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:43:46 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:43:47 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:43:47 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-02-28 04:43:47 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH/Controllers/LoginController.php(14): CodeIgniter\Model->__call('orderBy', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

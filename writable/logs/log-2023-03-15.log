@@ -1,0 +1,210 @@
+CRITICAL - 2023-03-15 19:30:01 --> Undefined array key "nombreUsuario"
+in APPPATH/Views/personas/body.php on line 25.
+ 1 APPPATH/Views/personas/body.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreUsuario"', 'APPPATH/Views/personas/body.php', 25)
+ 2 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/personas/body.php')
+ 3 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('personas/body', [], true)
+ 5 APPPATH/Controllers/LoginController.php(34): view('personas/body', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->home()
+ 7 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 8 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 19:40:04 --> Invalid file: "home.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+ 2 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('home', [], true)
+ 3 APPPATH/Controllers/LoginController.php(41): view('home', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\LoginController->home()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 21:58:00 --> Invalid file: "layouts/content-header.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/content-header.php')
+ 2 SYSTEMPATH/View/View.php(431): CodeIgniter\View\View->render('layouts/content-header', null, true)
+ 3 APPPATH/Views/modulos/agenda/calendar.php(15): CodeIgniter\View\View->include('layouts/content-header')
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/modulos/agenda/calendar.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('modulos/agenda/calendar', [], true)
+ 7 APPPATH/Controllers/ModulosController.php(20): view('modulos/agenda/calendar', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ModulosController->agenda()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ModulosController))
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 21:59:16 --> Invalid file: "layouts/content-header.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/content-header.php')
+ 2 SYSTEMPATH/View/View.php(431): CodeIgniter\View\View->render('layouts/content-header', null, true)
+ 3 APPPATH/Views/modulos/agenda/calendar.php(15): CodeIgniter\View\View->include('layouts/content-header')
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/modulos/agenda/calendar.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('modulos/agenda/calendar', [], true)
+ 7 APPPATH/Controllers/ModulosController.php(20): view('modulos/agenda/calendar', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ModulosController->agenda()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ModulosController))
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 22:05:35 --> Invalid file: "layouts/content-header.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/content-header.php')
+ 2 SYSTEMPATH/View/View.php(431): CodeIgniter\View\View->render('layouts/content-header', null, true)
+ 3 APPPATH/Views/modulos/agenda/calendar.php(13): CodeIgniter\View\View->include('layouts/content-header')
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/modulos/agenda/calendar.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('modulos/agenda/calendar', [], true)
+ 7 APPPATH/Controllers/ModulosController.php(20): view('modulos/agenda/calendar', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ModulosController->agenda()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ModulosController))
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 22:21:46 --> Invalid file: "modulos/agenda/tipoDocumento.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/agenda/tipoDocumento.php')
+ 2 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('modulos/agenda/tipoDocumento', [], true)
+ 3 APPPATH/Controllers/ModulosController.php(28): view('modulos/agenda/tipoDocumento', [...])
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ModulosController->tipoDocumento()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ModulosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 22:33:08 --> include(modals/modal_tipodocumento): Failed to open stream: No existe el archivo o el directorio
+in APPPATH/Views/modulos/configuracion/tipodocumento.php on line 55.
+ 1 APPPATH/Views/modulos/configuracion/tipodocumento.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(modals/modal_tipodocumento): Failed to open stream: No existe el archivo o el directorio', 'APPPATH/Views/modulos/configuracion/tipodocumento.php', 55)
+ 2 APPPATH/Views/modulos/configuracion/tipodocumento.php(55): include()
+ 3 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/modulos/configuracion/tipodocumento.php')
+ 4 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/tipodocumento', [], true)
+ 6 APPPATH/Controllers/ModulosController.php(28): view('modulos/configuracion/tipodocumento', [...])
+ 7 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ModulosController->tipodocumento()
+ 8 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ModulosController))
+ 9 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 22:33:20 --> Invalid file: "modals/modal_tipodocumento.php"
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 33.
+ 1 SYSTEMPATH/View/View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modals/modal_tipodocumento.php')
+ 2 SYSTEMPATH/View/View.php(431): CodeIgniter\View\View->render('modals/modal_tipodocumento', null, true)
+ 3 APPPATH/Views/modulos/configuracion/tipodocumento.php(55): CodeIgniter\View\View->include('modals/modal_tipodocumento')
+ 4 SYSTEMPATH/View/View.php(213): include('APPPATH/Views/modulos/configuracion/tipodocumento.php')
+ 5 SYSTEMPATH/View/View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH/Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/tipodocumento', [], true)
+ 7 APPPATH/Controllers/ModulosController.php(28): view('modulos/configuracion/tipodocumento', [...])
+ 8 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\ModulosController->tipodocumento()
+ 9 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ModulosController))
+10 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 22:56:56 --> Object of class CodeIgniter\HTTP\Response could not be converted to string
+in APPPATH/Controllers/DocumentosController.php on line 13.
+ 1 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 2 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 3 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:24:35 --> Call to a member function insert() on null
+in APPPATH/Models/TipoDocumentoModel.php on line 28.
+ 1 APPPATH/Controllers/DocumentosController.php(22): App\Models\TipoDocumentoModel->guardarDocumento([...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->almacenar()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:28:15 --> Call to a member function insert() on null
+in APPPATH/Models/TipoDocumentoModel.php on line 28.
+ 1 APPPATH/Controllers/DocumentosController.php(22): App\Models\TipoDocumentoModel->guardarDocumento([...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->almacenar()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:29:27 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:30:05 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:32:33 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:35:41 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:36:54 --> You must set the database table to be used with your query.
+in SYSTEMPATH/Database/BaseConnection.php on line 882.
+ 1 SYSTEMPATH/Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH/Model.php(233): CodeIgniter\Model->builder()
+ 3 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 6 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 7 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:37:21 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:39:26 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:39:38 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:40:07 --> CodeIgniter\Database\BaseResult::getResult(): Argument #1 ($type) must be of type string, null given, called in /opt/lampp/htdocs/smiling/vendor/codeigniter4/framework/system/Model.php on line 241
+in SYSTEMPATH/Database/BaseResult.php on line 103.
+ 1 SYSTEMPATH/Model.php(241): CodeIgniter\Database\BaseResult->getResult(null)
+ 2 SYSTEMPATH/BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 3 APPPATH/Controllers/DocumentosController.php(12): CodeIgniter\BaseModel->findAll()
+ 4 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 5 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 6 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:45:37 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH/Models/TipoDocumentoModel.php on line 22.
+ 1 APPPATH/Controllers/DocumentosController.php(14): App\Models\TipoDocumentoModel->buscar()
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-15 23:52:04 --> json_decode(): Argument #1 ($json) must be of type string, CodeIgniter\Database\MySQLi\Result given
+in APPPATH/Models/TipoDocumentoModel.php on line 24.
+ 1 APPPATH/Models/TipoDocumentoModel.php(24): json_decode(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 APPPATH/Controllers/DocumentosController.php(14): App\Models\TipoDocumentoModel->buscar()
+ 3 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\DocumentosController->buscar()
+ 4 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DocumentosController))
+ 5 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
