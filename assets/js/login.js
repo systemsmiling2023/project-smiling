@@ -50,3 +50,19 @@ $(() => {
     });
 });
 
+$('#usuario').focus(function () {
+    $('#labelUsuario').css('color', '#343a40');
+});
+
+$('#usuario').focusout(function () {
+    $('#labelUsuario').css('color', '#616A6B');
+});
+
+$('#clave').focus(function () {
+    $('#labelClave').css('color', '#343a40');
+});
+
+$('#clave').focusout(function () {
+    $('#labelClave').css('color', '#616A6B');
+});
+

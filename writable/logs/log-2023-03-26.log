@@ -1,0 +1,7 @@
+CRITICAL - 2023-03-26 21:43:14 --> Call to undefined method App\Models\InteresesModel::actualizarDocumento
+in SYSTEMPATH/Model.php on line 841.
+ 1 APPPATH/Controllers/InteresesController.php(42): CodeIgniter\Model->__call('actualizarDocumento', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(934): App\Controllers\InteresesController->actualizar()
+ 3 SYSTEMPATH/CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\InteresesController))
+ 4 SYSTEMPATH/CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()

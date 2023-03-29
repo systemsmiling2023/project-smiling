@@ -57,7 +57,7 @@
                         <p>
                             Configuración
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-info right">1</span>
+                            <span class="badge badge-info right">3</span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
@@ -65,6 +65,18 @@
                             <a href="<?= base_url('tipodocumento') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Tipo de Documento</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('intereses') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Intereses o Gustos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('profesiones') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Profesiones</p>
                             </a>
                         </li>
                     </ul>

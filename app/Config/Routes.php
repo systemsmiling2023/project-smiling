@@ -52,14 +52,36 @@ $routes->add('/addUser', 'Home::addUser');
 // CALENDARIO
 $routes->get('agenda', 'ModulosController::agenda');
 
-// CONFIGURACIONES
-// 1. Tipo de Documento
-$routes->get('tipodocumento', 'ModulosController::tipodocumento');
-$routes->get('buscar', 'DocumentosController::buscar');
-$routes->add('almacenar', 'DocumentosController::almacenar');
-$routes->add('actualizar', 'DocumentosController::actualizar');
-$routes->add('obtenerId', 'DocumentosController::obtenerId');
-$routes->add('eliminar', 'DocumentosController::eliminar');
+$rol = 1;
+$rolesAcceso = [1, 2];
+if (in_array($rol, $rolesAcceso)) {
+    // CONFIGURACIONES
+    // 1. Tipo de Documento
+    $routes->get('tipodocumento', 'ModulosController::tipodocumento');
+    $routes->get('buscar', 'DocumentosController::buscar');
+    $routes->add('almacenar', 'DocumentosController::almacenar');
+    $routes->add('actualizar', 'DocumentosController::actualizar');
+    $routes->add('obtenerId', 'DocumentosController::obtenerId');
+    $routes->add('eliminar', 'DocumentosController::eliminar');
+
+    // 2. Intereses o Gustos
+    $routes->get('intereses', 'ModulosController::intereses');
+    $routes->get('buscarInteres', 'InteresesController::buscar');
+    $routes->add('almacenarInteres', 'InteresesController::almacenar');
+    $routes->add('actualizarInteres', 'InteresesController::actualizar');
+    $routes->add('obtenerInteresId', 'InteresesController::obtenerId');
+    $routes->add('eliminarInteres', 'InteresesController::eliminar');
+
+    // 3. Profesiones
+    $routes->get('profesiones', 'ModulosController::profesiones');
+    $routes->get('buscarProfesion', 'ProfesionesController::buscar');
+    $routes->add('almacenarProfesion', 'ProfesionesController::almacenar');
+    $routes->add('actualizarProfesion', 'ProfesionesController::actualizar');
+    $routes->add('obtenerProfesionId', 'ProfesionesController::obtenerId');
+    $routes->add('eliminarProfesion', 'ProfesionesController::eliminar');
+}
+
+
 
 
 

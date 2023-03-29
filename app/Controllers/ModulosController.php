@@ -27,4 +27,20 @@ class ModulosController extends BaseController
         ];
         return view('modulos/configuracion/tipodocumento', $title);
     }
+
+    public function intereses()
+    {
+        $title = [
+            "titulo" => "Smiling | Intereses"
+        ];
+        return view('modulos/configuracion/intereses', $title);
+    }
+
+    public function profesiones()
+    {
+        $title = [
+            "titulo" => "Smiling | Profesiones"
+        ];
+        return view('modulos/configuracion/profesiones', $title);
+    }
 }

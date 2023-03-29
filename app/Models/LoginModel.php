@@ -65,21 +65,11 @@ class LoginModel extends Model
                     $this->builder->where('usuario', $usuario);
                     $this->builder->update();
 
-                    // GUARDAR DETALLE EN BITACORA
-                    // $this->bitacora->bitacora(3, 1, 'Intento fallido al iniciar sesión', 1, 'co_usuarios');
-                    // var_dump($this->bitacora);
-
                     $result = array('ERROR' => true, 'dato' => 'ACCESO DENEGADO');
                 }
             }
         }
 
         return json_encode($result);
-    }
-
-    // FUNCION PARA AGREGAR UN USUARIO AL SISTEMA
-    public function addUser($data)
-    {
-        $this->builder->insert($data);
     }
 }

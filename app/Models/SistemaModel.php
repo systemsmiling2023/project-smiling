@@ -13,21 +13,20 @@ class SistemaModel extends Model
     protected $db;
     protected $builder;
 
-    public function __construct()
-    {
-        $this->db = \Config\Database::connect();
-        $this->builder = $this->db->table('bi_bitacoras');
-    }
+    // public function __construct()
+    // {
+    //     $this->db = \Config\Database::connect();
+    //     $this->builder = $this->db->table('bi_bitacoras');
+    // }
 
-    public function bitacora($idMov, $usuario, $detalle = '', $id = '', $tabla = '')
-    {
-        $data['idMovimiento'] = $idMov;
-        $data['fechaHora'] = date('Y-m-d H:i:s');
-        $data['idTabla'] = $id;
-        $data['tablaRelacionada'] = $tabla;
-        $data['usuario'] = $usuario;
-        $data['detalle'] = $detalle;
+    protected $table = 'bi_bitacoras';
+    protected $primaryKey = 'bitacoraId';
+    // protected $allowedFields = ['tidoDocId', 'tipoDocumento'];
 
-        $this->builder->insert($data);
+    public function bitacora($data)
+    {
+        $db = \Config\Database::connect();
+        $builder = $this->db->table($this->table);
+        $builder->insert($data);
     }
 }

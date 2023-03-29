@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\TipoDocumentoModel;
-use App\Models\TipoDocumentoModel2;
 
 class DocumentosController extends BaseController
 {
