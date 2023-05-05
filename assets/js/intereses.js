@@ -4,6 +4,7 @@ $(() => {
     });
 
     $('#btnAddInteres').on('click', function () {
+        reiniciarFormulario();
         $('#interesId').val('');
         $('#interesModalLabel').html('Nuevo Interes o Gusto');
         $('#interesModal').modal('show');
@@ -38,11 +39,16 @@ function guardarInteres() {
         $.ajax({
             url: url,
             data: data,
+            dataType: 'json',
             type: "POST",
             success: function (response) {
-                $('#interesModal').modal('hide');
-                $('#interesModal').find('input').val('');
-                mostrarIntereses();
+                if (response.ERROR) {
+                    Swal.fire('ATENCIÓN', response.dato, 'warning');
+                } else {
+                    $('#interesModal').modal('hide');
+                    $('#interesModal').find('input').val('');
+                    mostrarIntereses();
+                }
             }
         });
     }
@@ -62,7 +68,7 @@ function mostrarIntereses() {
 
                 let contenido = /*html*/ `<tr>
                         <td class="text-center">${(key + 1)}</td>
-                        <td><i class="fas fa-id-card"></i> &nbsp; &nbsp; ${value['nombreInteres'].toUpperCase()} </td>
+                        <td><i class="fas fa-heart"></i> &nbsp; &nbsp; ${value['nombreInteres'].toUpperCase()} </td>
                         <td class="text-center">
                             <button onclick="actualizarInteres(${value['interesId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
                             <button onclick="eliminarInteres(${value['interesId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
@@ -108,15 +114,26 @@ function eliminarInteres(id) {
                 data: { id: id },
                 type: "POST",
                 success: function (response) {
-                    mostrarIntereses();
-                    Swal.fire(
-                        '¡Hecho!',
-                        'Elemento eliminado con éxito',
-                        'success'
-                    );
+
+                    if (response.ERROR) {
+                        Swal.fire('ATENCIÓN', response.dato, 'warning');
+                    } else {
+                        mostrarIntereses();
+                        Swal.fire(
+                            '¡Hecho!',
+                            'Elemento eliminado con éxito',
+                            'success'
+                        );
+                    }
+
                 }
             });
         }
     });
 }
+
+function reiniciarFormulario() {
+    $('#frmIntereses').trigger('reset');
+    $('#txtIntereses').focus();
+};
 

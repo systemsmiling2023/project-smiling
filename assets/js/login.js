@@ -8,19 +8,23 @@ $(() => {
 
         if (usuario == "") {
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 icon: 'warning',
                 title: 'Por favor ingrese usuario',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2500,
+                background: '#17202A',
+                color: 'white'
             });
         } else if (clave == "") {
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 icon: 'warning',
                 title: 'Por favor ingrese contraseña',
                 showConfirmButton: false,
-                timer: 1500
+                timer: 2500,
+                background: '#17202A',
+                color: 'white'
             });
         } else {
             $.ajax({
@@ -34,15 +38,19 @@ $(() => {
                 success: response => {
                     if (response.ERROR) {
                         Swal.fire({
-                            position: 'top-end',
-                            icon: 'warning',
-                            title: response.dato,
-                            showConfirmButton: false,
-                            timer: 1500
+                            position: 'center',
+                            icon: 'error',
+                            title: '¡ATENCIÓN!',
+                            html: response.dato,
+                            showConfirmButton: true,
+                            background: '#17202A',
+                            color: 'white'
                         });
                     } else {
                         $(location).attr('href', 'home');
                     }
+
+                    console.log(response);
                 }
             });
         }

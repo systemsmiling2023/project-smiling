@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
-    <title><?= lang('Errors.pageNotFound') ?></title>
+    <title>Smiling | No encontrada</title>
+    <link rel="stylesheet" href="<?= base_url('/public/fontawesome/css/all.min.css') ?>">
 
     <style>
         div.logo {
@@ -19,9 +20,9 @@
 
         body {
             height: 100%;
-            background: #fafafa;
+            background: #343a40;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            color: #777;
+            color: #eeee;
             font-weight: 300;
         }
 
@@ -31,14 +32,14 @@
             font-size: 3rem;
             margin-top: 0;
             margin-bottom: 0;
-            color: #222;
+            color: #eeee;
         }
 
         .wrap {
             max-width: 1024px;
             margin: 5rem auto;
             padding: 2rem;
-            background: #fff;
+            background: #6c757d;
             text-align: center;
             border: 1px solid #efefef;
             border-radius: 0.5rem;
@@ -70,17 +71,18 @@
             color: #999;
         }
 
-        a:active,
+        /* a:active,
         a:link,
         a:visited {
             color: #dd4814;
-        }
+        } */
     </style>
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="wrap">
-        <h1>404</h1>
+        <i class="fas fa-tooth text-secondary fa-4x" id="dienteSmiling"></i>
+        <h1>Clínica Dental Smiling</h1>
         <p>PÁGINA NO ENCONTRADA</p>
 
         <p>
@@ -90,6 +92,11 @@
                 <?= lang('Errors.sorryCannotFind') ?>
             <?php endif ?>
         </p>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a class="btn btn-warnign" href="login">Regresar a Inicio</a>
+            </div>
+        </div>
     </div>
 </body>
 

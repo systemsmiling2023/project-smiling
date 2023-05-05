@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="<?= base_url('public/dist/img/diente2.png') ?>" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url('/public/bootstrap/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('/public/fontawesome/css/all.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('/assets/css/login.css') ?>">
@@ -21,6 +22,7 @@
 <body style="background:#17202A">
     <!-- Section: Design Block -->
     <section class="">
+
         <!-- Jumbotron -->
         <div style="margin-top:100px !important" class="bg-dark px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
             <div class="container">
@@ -81,7 +83,8 @@
                                         Entrar
                                     </button>
 
-                                    <a href="#" class="stretched-link text-warning">¿olvidaste las credenciales?</a>
+                                    <a href="#" class="stretched-link text-warning">¿olvidaste las credenciales?</a> <br>
+                                    <a href="registro" class=""><span class="badge badge-warning">REGISTRARSE</span></a>
                                 </form>
                             </div>
                         </div>

@@ -27,34 +27,45 @@ $routes->set404Override();
  * --------------------------------------------------------------------
  */
 
-// We get a performance increase by specifying the default
-// route since we don't have to scan directories.
-// $routes->get('/', 'Home::index');
-// $routes->add('/contacto', 'Home::contacto');
-// $routes->add('/home', 'Home::index');
-// $routes->get('/contacto', 'ContactoController::index');
-// $routes->get('/documentacion/(:num)', 'ContactoController::documentacion/$1');
-// $routes->get('/documentacion', 'ContactoController::documentacion');
-// $routes->post('/recibirFormulario', 'ContactoController::recibirDatos');
-// $routes->get('/documentos', 'DocumentosController::index');
+// // CALENDARIO
+// $routes->get('agenda', 'ModulosController::agenda');
 
 
 
-
-// LOGIN
-$routes->post('/validarLogin', 'LoginController::validar');
 $routes->get('/', 'LoginController::index');
-$routes->add('/home', 'LoginController::home');
+$routes->add('cerrarSesion', 'LoginController::salir');
+$routes->add('login', 'LoginController::index');
 
-// AGREGAR USUARIO
-$routes->add('/addUser', 'Home::addUser');
+$routes->post('validarLogin', 'LoginController::validar');
+$routes->add('registro', 'LoginController::registro');
+$routes->add('traerMunicipios', 'RegistroController::traerMunicipios');
+$routes->post('guardarPersona', 'RegistroController::formulario');
 
-// CALENDARIO
-$routes->get('agenda', 'ModulosController::agenda');
+  
 
-$rol = 1;
-$rolesAcceso = [1, 2];
-if (in_array($rol, $rolesAcceso)) {
+
+// Definiendo grupos para los autenticados
+$routes->group('/', ['namespace' => 'App\Controllers', 'filter' => 'Auth'], function ($routes) {
+
+    $routes->add('/home', 'LoginController::home');
+    $routes->add('/login', 'LoginController::index');
+
+
+});
+
+$routes->group('agenda', ['namespace' => 'App\Controllers\Agenda', 'filter' => 'Auth'], function ($routes) {
+
+    $routes->get('main', 'ModulosController::agenda');
+    $routes->get('agenda', 'AgendaController::listarAgenda');
+    $routes->get('sucursales', 'AgendaController::listarSucursales');
+    $routes->add('horaDisponible', 'AgendaController::listarHorariosDisponibles');
+    $routes->add('agendar', 'AgendaController::guardarCitaAgenda');
+
+});
+
+
+// Definiendo grupos para los de tipo Admin
+$routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filter' => 'Admin'], function ($routes) {
     // CONFIGURACIONES
     // 1. Tipo de Documento
     $routes->get('tipodocumento', 'ModulosController::tipodocumento');
@@ -79,7 +90,127 @@ if (in_array($rol, $rolesAcceso)) {
     $routes->add('actualizarProfesion', 'ProfesionesController::actualizar');
     $routes->add('obtenerProfesionId', 'ProfesionesController::obtenerId');
     $routes->add('eliminarProfesion', 'ProfesionesController::eliminar');
-}
+
+    // 4. Medios Conocer
+    $routes->get('mediosconocer', 'ModulosController::mediosconocer');
+    $routes->get('buscarMedio', 'MediosConocerController::buscar');
+    $routes->add('almacenarConocer', 'MediosConocerController::almacenar');
+    $routes->add('actualizarMediosConocer', 'MediosConocerController::actualizar');
+    $routes->add('obtenerIdConocer', 'MediosConocerController::obtenerId');
+    $routes->add('eliminarMediosConocer', 'MediosConocerController::eliminar');
+
+    // 5. Franja Horario
+    $routes->get('franjahorario', 'ModulosController::franjahorario');
+    $routes->get('buscarFranjaH', 'FranjaHorarioController::buscar');
+    $routes->add('almacenarFranja', 'FranjaHorarioController::almacenar');
+    $routes->add('actualizarFranja', 'FranjaHorarioController::actualizar');
+    $routes->add('obtenerIdFranja', 'FranjaHorarioController::obtenerId');
+    $routes->add('eliminarFranja', 'FranjaHorarioController::eliminar');
+
+    // 6. Personas
+    $routes->get('personas', 'ModulosController::personas');
+    $routes->get('mostrarPersonas', 'PersonasController::buscar');
+    $routes->add('almacenarPersonas', 'PersonasController::almacenar');
+    $routes->add('eliminarPersonas', 'PersonasController::eliminar');
+    $routes->add('obtenerPersonasId', 'PersonasController::obtenerId');
+    $routes->add('actualizarPersona', 'PersonasController::actualizar');
+    $routes->get('mostraMunicipios', 'PersonasController::municipios');
+
+    // 7. Usuarios
+    $routes->get('usuarios', 'ModulosController::usuarios');
+    $routes->get('mostrarUsuarios', 'UsuariosController::buscar');
+    $routes->add('eliminarUsuario', 'UsuariosController::eliminar');
+    $routes->get('mostrarPersona', 'UsuariosController::persona');
+    $routes->get('mostrarRol', 'UsuariosController::rol');
+    $routes->add('almacenarUsuarios', 'UsuariosController::almacenar');
+    $routes->add('obtenerUsuarioId', 'UsuariosController::obtenerId');
+    $routes->add('actualizarUsuario', 'UsuariosController::actualizar');
+
+    // 8. Tipo de Contacto
+    $routes->get('tipocontacto', 'ModulosController::tipocontacto');
+    $routes->get('lookup', 'ContactosController::lookup');
+    $routes->add('create', 'ContactosController::create');
+    $routes->add('update', 'ContactosController::update');
+    $routes->add('getId', 'ContactosController::getId');
+    $routes->add('delete', 'ContactosController::delete');
+
+    // 9. Tipo de Cargo
+    $routes->get('cargo', 'ModulosController::cargo');
+    $routes->get('buscarCargo', 'CargoController::buscarCargo');
+    $routes->add('almacenarCargo', 'CargoController::almacenarCargo');
+    $routes->add('actualizarCargo', 'CargoController::actualizarCargo');
+    $routes->add('getCargoId', 'CargoController::getCargoId');
+    $routes->add('borrarCargo', 'CargoController::borrarCargo');
+
+    // 10. Rol de Usuario
+    $routes->get('rol', 'ModulosController::rol');
+    $routes->get('buscarRol', 'RolesController::buscarRol');
+    $routes->add('almacenarRol', 'RolesController::almacenarRol');
+    $routes->add('actualizarRol', 'RolesController::actualizarRol');
+    $routes->add('obtenerRolId', 'RolesController::obtenerRolId');
+    $routes->add('eliminarRol', 'RolesController::eliminarRol');
+
+    // 11. Empleado
+    $routes->get('empleado', 'ModulosController::empleado');
+    $routes->get('buscarEmpleado', 'EmpleadosController::buscarEmpleado');
+    $routes->add('almacenarEmpleado', 'EmpleadosController::almacenarEmpleado');
+    $routes->add('actualizarEmpleado', 'EmpleadosController::actualizarEmpleado');
+    $routes->add('obtenerEmpleadoId', 'EmpleadosController::obtenerEmpleadoId');
+    $routes->add('eliminarEmpleado', 'EmpleadosController::eliminarEmpleado');
+    $routes->get('mostrarNombreEmpleado','EmpleadosController::mostrarNombreEmpleado');
+    $routes->get('mostrarNombreCargo','EmpleadosController::mostrarNombreCargo');
+    $routes->get('buscarJoin','EmpleadosController::buscarJoin');
+
+    // 12. Profesión Empleado
+    $routes->post('buscarProfesion', 'EmpleadosProfesionController::buscar');
+    $routes->add('almacenarEmpleadoProfesion', 'EmpleadosProfesionController::almacenar');
+    $routes->add('actualizarEmpleadoProfesion', 'EmpleadosProfesionController::actualizar');
+    $routes->add('obtenerEmpleadoProfesionId', 'EmpleadosProfesionController::obtenerId');
+    $routes->add('eliminarEmpleadoProfesion', 'EmpleadosProfesionController::eliminar');
+    $routes->get('mostrarNombreEmpleado','EmpleadosProfesionController::NombreEmpleado');
+    $routes->get('mostrarProfesion','EmpleadosProfesionController::NombreProfesion');
+
+    // 13. Sucursal Empleado
+    $routes->post('buscarSucursal', 'EmpleadoSucursalController::buscar');
+    $routes->add('almacenarEmpleadoSucursal', 'EmpleadoSucursalController::almacenar');
+    $routes->add('actualizarEmpleadoSucursal', 'EmpleadoSucursalController::actualizar');
+    $routes->add('obtenerEmpleadoSucursalId', 'EmpleadoSucursalController::obtenerId');
+    $routes->add('eliminarEmpleadoSucursal', 'EmpleadoSucursalController::eliminar');
+    $routes->get('mostrarNombreEmpleado','EmpleadoSucursalController::mostrarSucEmpleado');
+    $routes->get('mostrarSucursal','EmpleadoSucursalController::mostrarSucursal');
+
+
+    // 14. Documentos
+    $routes->add('mostrarDocumento', 'DocPersonaController::mostrar');
+    $routes->get('mostrarTipoDoc', 'DocPersonaController::TipoDoc');
+    $routes->add('agregarTipoDoc', 'DocPersonaController::almacenar');
+    $routes->add('obtenerDocumentoId', 'DocPersonaController::obtenerId');
+    $routes->add('actualizarTipoDoc', 'DocPersonaController::actualizar');
+    $routes->add('eliminarDoc', 'DocPersonaController::eliminar');
+
+    // 15. Contactos
+    $routes->add('mostrarContactos', 'ContPersonasController::mostrar');
+    $routes->get('mostrarTipoCont', 'ContPersonasController::TipoContacto');
+    $routes->add('agregarTipoContacto', 'ContPersonasController::almacenar');
+    $routes->add('eliminarContacto', 'ContPersonasController::eliminar');
+    $routes->add('obtenerContactoId', 'ContPersonasController::obtenerId');
+    $routes->add('actualizarTipoContacto', 'ContPersonasController::actualizar');
+
+    // 16. Usuarios
+    $routes->get('usuarios', 'ModulosController::usuarios');
+    $routes->get('mostrarUsuarios', 'UsuariosController::buscar');
+    $routes->add('eliminarUsuario', 'UsuariosController::eliminar');
+    $routes->get('mostrarPersona', 'UsuariosController::persona');
+    $routes->get('mostrarRol', 'UsuariosController::rol');
+    $routes->add('almacenarUsuarios', 'UsuariosController::almacenar');
+    $routes->add('obtenerUsuarioId', 'UsuariosController::obtenerId');
+    $routes->add('actualizarUsuario', 'UsuariosController::actualizar');
+    $routes->add('verificarNombreUsuario', 'UsuariosController::verificarUsuario');
+
+});
+
+
+
 
 
 

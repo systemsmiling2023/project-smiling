@@ -56,6 +56,9 @@
                                         <button id="add-new-event" type="button" class="btn btn-primary">Agregar</button>
                                     </div>
                                 </div>
+
+                                <br>
+                                <button id="nuevaCita" onclick="agregarEvento()" type="button" class="btn btn-info">Nueva Cita</button>
                             </div>
                         </div>
                     </div>
@@ -71,11 +74,17 @@
         </div>
     </section>
 </div>
+
+<?= $this->include('modals/modal_agenda') ?>
+
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
 
+<!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@3.10.2/dist/locale/es.js'></script> -->
+<!-- <script src='https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js'></script> -->
 <script src="<?= base_url('public/moment/moment.min.js') ?>"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@2.9.0/dist/lang/es.js"></script>
 <script src="<?= base_url('public/fullcalendar/main.js') ?>"></script>
 <script src="<?= base_url('assets/js/calendario.js') ?>"></script>
 

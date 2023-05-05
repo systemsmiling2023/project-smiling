@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form class="form">
+                <form class="form" id="frmIntereses">
                     <div class="row">
                         <div class="col-sm-12">
                             <label>Interes / Gusto</label>

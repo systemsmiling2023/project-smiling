@@ -4,6 +4,7 @@ $(() => {
     });
 
     $('#btnAddProfesion').on('click', function () {
+        reiniciarFormulario();
         $('#profesionId').val('');
         $('#profesionesModalLabel').html('Nueva Profesión');
         $('#profesionesModal').modal('show');
@@ -38,11 +39,16 @@ function guardarProfesion() {
         $.ajax({
             url: url,
             data: data,
+            dataType: 'json',
             type: "POST",
             success: function (response) {
-                $('#profesionesModal').modal('hide');
-                $('#profesionesModal').find('input').val('');
-                mostrarProfesiones();
+                if (response.ERROR) {
+                    Swal.fire('ATENCIÓN', response.dato, 'warning');
+                } else {
+                    $('#profesionesModal').modal('hide');
+                    $('#profesionesModal').find('input').val('');
+                    mostrarProfesiones();
+                }
             }
         });
     }
@@ -61,7 +67,7 @@ function mostrarProfesiones() {
 
                 let contenido = /*html*/ `<tr>
                         <td class="text-center">${(key + 1)}</td>
-                        <td><i class="fas fa-id-card"></i> &nbsp; &nbsp; ${value['profesion'].toUpperCase()} </td>
+                        <td><i class="fas fa-tools"></i> &nbsp; &nbsp; ${value['profesion'].toUpperCase()} </td>
                         <td class="text-center">
                             <button onclick="actualizarProfesion(${value['profesionId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
                             <button onclick="eliminarProfesion(${value['profesionId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
@@ -105,17 +111,27 @@ function eliminarProfesion(id) {
             $.ajax({
                 url: "eliminarProfesion",
                 data: { id: id },
+                dataType: 'json',
                 type: "POST",
                 success: function (response) {
-                    mostrarProfesiones();
-                    Swal.fire(
-                        '¡Hecho!',
-                        'Elemento eliminado con éxito',
-                        'success'
-                    );
+                    if (response.ERROR) {
+                        Swal.fire('ATENCIÓN', response.dato, 'warning');
+                    } else {
+                        mostrarProfesiones();
+                        Swal.fire(
+                            '¡Hecho!',
+                            'Elemento eliminado con éxito',
+                            'success'
+                        );
+                    }
                 }
             });
         }
     });
 }
+
+function reiniciarFormulario() {
+    $('#frmProfesiones').trigger('reset');
+    $('#txtProfesion').focus();
+};
 

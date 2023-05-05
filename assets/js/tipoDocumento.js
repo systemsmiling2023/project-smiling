@@ -4,6 +4,7 @@ $(() => {
     });
 
     $('#btnAddTipoDoc').on('click', function () {
+        reiniciarFormulario();
         $('#tipoDocumentoId').val('');
         $('#tipodocModalLabel').html('Nuevo Tipo Documento');
         $('#tipodocModal').modal('show');
@@ -38,11 +39,16 @@ function guardarTipodoc() {
         $.ajax({
             url: url,
             data: data,
+            dataType: 'json',
             type: "POST",
             success: function (response) {
-                $('#tipodocModal').modal('hide');
-                $('#tipodocModal').find('input').val('');
-                mostrarTipodoc();
+                if (response.ERROR) {
+                    Swal.fire('ATENCIÓN', response.dato, 'warning');
+                } else {
+                    $('#tipodocModal').modal('hide');
+                    $('#tipodocModal').find('input').val('');
+                    mostrarTipodoc();
+                }
             }
         });
     }
@@ -106,17 +112,27 @@ function eliminarTipodoc(id) {
             $.ajax({
                 url: "eliminar",
                 data: { id: id },
+                dataType: 'json',
                 type: "POST",
                 success: function (response) {
-                    mostrarTipodoc();
-                    Swal.fire(
-                        '¡Hecho!',
-                        'Elemento eliminado con éxito',
-                        'success'
-                    );
+                    if (response.ERROR) {
+                        Swal.fire('ATENCIÓN', response.dato, 'warning');
+                    } else {
+                        mostrarTipodoc();
+                        Swal.fire(
+                            '¡Hecho!',
+                            'Elemento eliminado con éxito',
+                            'success'
+                        );
+                    }
                 }
             });
         }
     });
 }
+
+function reiniciarFormulario() {
+    $('#frmTipoDocumentos').trigger('reset');
+    $('#tipoDocumento').focus();
+};
 

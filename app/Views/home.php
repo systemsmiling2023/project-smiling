@@ -11,31 +11,31 @@
             <div class="row mt-5">
                 <div class="col-md-4">
                     <div class="card" style="width: 100%">
-                        <img src="<?= base_url('public/dist/img/dentista.png') ?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url('public/dist/img/dentistaMod1.png') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Módulo de Personas</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h3 class=" text-info">Módulo de Personas</h3>
+                            <p class="card-text">En esta sección puede configurar todo lo relacionado a las personas, empleados y pacientes.</p>
+                            <a href="#" class="btn btn-primary">Entrar a Módulo</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" style="width: 100%">
-                        <img src="<?= base_url('public/dist/img/dentista.png') ?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url('public/dist/img/dentistaMod2.png') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Módulo de Agenda</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h3 class=" text-info">Módulo de Agenda</h3>
+                            <p class="card-text">En esta sección puede visualizar las citas agendadas, canceladas y realizadas por calendario.</p>
+                            <a href="agenda/main" class="btn btn-primary">Entrar a Módulo</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card" style="width: 100%">
-                        <img src="<?= base_url('public/dist/img/dentista.png') ?>" class="card-img-top" alt="...">
+                        <img src="<?= base_url('public/dist/img/dentistaMod3.png') ?>" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Módulo de Expediente</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h3 class=" text-info">Módulo de Expediente</h3>
+                            <p class="card-text">En esta sección puede visualizar y actualizar toda la información esencial del paciente y expediente clínico.</p>
+                            <a href="#" class="btn btn-primary">Entrar a Módulo</a>
                         </div>
                     </div>
                 </div>

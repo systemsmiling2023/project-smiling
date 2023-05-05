@@ -9,67 +9,51 @@ use CodeIgniter\Model;
 class LoginModel extends Model
 {
 
-    protected $request;
-    protected $model;
-    protected $db;
-    protected $builder;
-    // protected $bitacora;
-
-    public function __construct()
-    {
-
-        $this->db = \Config\Database::connect();
-        $this->builder = $this->db->table('co_usuarios');
+    public function buscarUsuario($usuario){
+        $db = \Config\Database::connect();
+        $builder = $db->table('co_usuarios');
+        $builder->selectCount('usuario');
+        $builder->where('usuario', $usuario);
+        $query = $builder->get()->getResultArray();
+        return $query;
     }
 
-    // FUNCION PARA VALIDAR LOS DATOS DE LOGIN
-    public function validarLogin($usuario, $clave)
+    public function validarLogin($usuario)
     {
-        // CONSULTANDO SI ESTÁ BLOQUEADO EL USUARIO
-        $this->builder->select('intentosFallidos, limiteIntentosFallidos');
-        $this->builder->where('usuario', $usuario);
-        $this->builder->limit(1);
 
-        $get = $this->builder->get();
+        $db = \Config\Database::connect();
+        $builder = $db->table('co_usuarios a');
+        $builder->select('a.usuario, a.clave, 
+                          a.intentosFallidos, 
+                          a.limiteIntentosFallidos,
+                          a.usuarioId,
+                          a.rolId,
+                          b.personaId, 
+                          b.nombres, 
+                          b.primerApellido,
+                          b.sexo');
+        $builder->join('pe_personas b', 'a.personaId = b.personaId');
+        $builder->where('a.usuario', $usuario);
+        $builder->limit(1);
+        $datos = $builder->get()->getResultArray();
+        return $datos;
+    }
 
+    public function intentoFallido($usuario)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('co_usuarios');
+        $builder->set('intentosFallidos', 'intentosFallidos+1', false);
+        $builder->where('usuario', $usuario);
+        $builder->update();
+    }
 
-        $intentos = $get->getFirstRow();
-        $intentos = json_decode(json_encode($intentos), true);
-
-        // VALIDANDO LOS INTENTOS FALLIDOS
-        if (intval($intentos['intentosFallidos']) >= intval($intentos['limiteIntentosFallidos'])) {
-            $result = array('ERROR' => true, 'dato' => 'USUARIO BLOQUEADO');
-        } else {
-            // SI NO ESTÁ BLOQUEADO CONSULTAR LOS DATOS PARA ACCEDER
-            $this->builder->select('clave');
-            $this->builder->where('usuario', $usuario);
-            $this->builder->orwhere('clave', $clave);
-            $this->builder->limit(1);
-
-            $query = $this->builder->get();
-
-            // SI LA CONSULTA NO DEVUELVE RESULTADO, PROBLEMA DE CREDENCIALES
-            if ($query->getNumRows() == 0) {
-                $result = array('ERROR' => true, 'dato' => 'CREDENCIALES INCORRECTAS');
-            } else {
-
-                $row   = $query->getFirstRow();
-                $array = json_decode(json_encode($row), true);
-
-                // SI LA CLAVE ENCRIPTADA ES VERIFICADA
-                if (password_verify($clave, $array["clave"])) {
-                    $result = array('ERROR' => false, 'dato' => 'BIENVENIDO');
-                } else {
-                    // SI LA CLAVE NO ES, AUMENTAR UN INTENTO FALLIDO
-                    $this->builder->set('intentosFallidos', 'intentosFallidos+1', false);
-                    $this->builder->where('usuario', $usuario);
-                    $this->builder->update();
-
-                    $result = array('ERROR' => true, 'dato' => 'ACCESO DENEGADO');
-                }
-            }
-        }
-
-        return json_encode($result);
+    public function reiniciarIntentosFallidos($usuario)
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('co_usuarios');
+        $builder->set('intentosFallidos', '0', false);
+        $builder->where('usuario', $usuario);
+        $builder->update();
     }
 }
