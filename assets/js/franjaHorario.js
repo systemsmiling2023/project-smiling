@@ -30,6 +30,7 @@ function mostrarFranjaHorario() {
         url: "buscarFranjaH",
         success: function (response) {
             $.each(response.franjaHorario, function (key, value) {
+                console.log(response.franjaHorario);
                 let franjaEstado = '';
                 if (value['estado'] == 1) {
                     franjaEstado = 'ACTIVO';

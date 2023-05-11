@@ -93,7 +93,7 @@ $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filte
 
     // 4. Medios Conocer
     $routes->get('mediosconocer', 'ModulosController::mediosconocer');
-    $routes->get('buscarMedio', 'MediosConocerController::buscar');
+    $routes->post('buscarMedio', 'MediosConocerController::buscar');
     $routes->add('almacenarConocer', 'MediosConocerController::almacenar');
     $routes->add('actualizarMediosConocer', 'MediosConocerController::actualizar');
     $routes->add('obtenerIdConocer', 'MediosConocerController::obtenerId');

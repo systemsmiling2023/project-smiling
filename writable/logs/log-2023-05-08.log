@@ -1,0 +1,44 @@
+ERROR - 2023-05-08 19:13:29 --> mysqli_sql_exception: CONSTRAINT `bi_bitacoras.detalle` failed for `smiling`.`bi_bitacoras` in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\SistemaModel.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(69): App\Models\SistemaModel->guardarBitacora(Array)
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->validar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 19:13:29 --> CONSTRAINT `bi_bitacoras.detalle` failed for `smiling`.`bi_bitacoras`
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi_bitacoras` (`idMovimiento`, `fechaHora`, `idTabla`, `tablaRelacionada`, `usuario`, `detalle`) VALUES (:idMovimiento:, :fechaHora:, :idTabla:, :tablaRelacionada:, :usuario:, :detalle:)', [...], false)
+ 2 APPPATH\Models\SistemaModel.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\LoginController.php(69): App\Models\SistemaModel->guardarBitacora([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-08 19:41:47 --> mysqli_sql_exception: CONSTRAINT `bi_bitacoras.detalle` failed for `smiling`.`bi_bitacoras` in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\SistemaModel.php(16): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(69): App\Models\SistemaModel->guardarBitacora(Array)
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->validar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-08 19:41:48 --> CONSTRAINT `bi_bitacoras.detalle` failed for `smiling`.`bi_bitacoras`
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2295): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi_bitacoras` (`idMovimiento`, `fechaHora`, `idTabla`, `tablaRelacionada`, `usuario`, `detalle`) VALUES (:idMovimiento:, :fechaHora:, :idTabla:, :tablaRelacionada:, :usuario:, :detalle:)', [...], false)
+ 2 APPPATH\Models\SistemaModel.php(16): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\LoginController.php(69): App\Models\SistemaModel->guardarBitacora([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->validar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

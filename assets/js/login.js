@@ -50,7 +50,7 @@ $(() => {
                         $(location).attr('href', 'home');
                     }
 
-                    console.log(response);
+                    //console.log(response);
                 }
             });
         }

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use App\Models\SistemaModel;
+use App\Models\SistemaModel;
 use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Model;
 

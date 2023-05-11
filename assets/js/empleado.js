@@ -22,7 +22,8 @@ $(() => {
 
 // GUARDAR EMPLEADO
 function guardarEmpleado() {
-    if (($('#fechaIngreso').val() == "") || ($('#empleadoId').val() == "") || ($('#cargoId').val() == "") || ($('#estado').val() == "")) {
+    if (($('#fechaIngreso').val() == "") || ($('#personaId').val() == "") || ($('#cargoId').val() == "") || ($('#estado').val() == "")) {
+        console.log('#fechaIngreso');
         Swal.fire({
             title: 'Todos los datos son requeridos',
             text: "Vuelva a intentarlo!",

@@ -20,6 +20,7 @@
                                         <i class="fas fa-user"></i>
                                     </div>
                                 </div>
+                                <input type="hidden" id="empleadoId" name="empleadoId" readonly>
                                 <select class="form-control" name="personaId" id="personaId" style="text-transform:uppercase">
                                 </select>
                             </div>
@@ -44,7 +45,6 @@
                                         <i class="fas fa-calendar"></i>
                                     </div>
                                 </div>
-                                <input type="hidden" id="empleadoId" name="empleadoId" readonly>
                                 <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" style="text-transform:uppercase">
                             </div>
                         </div>
