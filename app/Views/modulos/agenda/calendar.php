@@ -61,6 +61,14 @@
                                 <button id="nuevaCita" onclick="agregarEvento()" type="button" class="btn btn-info">Nueva Cita</button>
                             </div>
                         </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Cumpleañeros</h4>
+                            </div>
+                            <div class="card-body">
+                            <a href="<?= base_url('agenda/cumpleaneros') ?>" class="btn btn-primary">Haz clic aquí</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-9">

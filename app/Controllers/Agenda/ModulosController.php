@@ -21,5 +21,13 @@ class ModulosController extends BaseController
         return view('modulos/agenda/calendar', $title);
     }
 
+    public function cumpleanero()
+    {
+        $title = [
+            "titulo" => "Smiling | Cumpleañeros"
+        ];
+        return view('modulos/agenda/cumpleaneros', $title);
+    }
+
     
 }

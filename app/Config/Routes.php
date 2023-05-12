@@ -60,7 +60,11 @@ $routes->group('agenda', ['namespace' => 'App\Controllers\Agenda', 'filter' => '
     $routes->get('sucursales', 'AgendaController::listarSucursales');
     $routes->add('horaDisponible', 'AgendaController::listarHorariosDisponibles');
     $routes->add('agendar', 'AgendaController::guardarCitaAgenda');
-
+    
+    // Cumpleañeros
+    $routes->get('cumpleaneros', 'ModulosController::cumpleanero');
+    $routes->add('mostrarCumples','CumpleaneroController::buscar');
+    $routes->add('mostrarSucursal','CumpleaneroController::mostrarSucursal');
 });
 
 
