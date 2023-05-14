@@ -304,4 +304,31 @@ class ModulosController extends BaseController
 
         return view($ruta, $title);
     }
+
+    public function proveedor()
+    {
+        $sistema = new SistemaModel();
+        $title = [
+            "titulo" => "Smiling | Proveedores"
+        ];
+        $ruta = 'modulos/configuracion/proveedor';
+        
+        // INICIO : GUARDAR EN BITACORA
+        $detalle = array();
+        $detalle['tituloInterfaz'] = $title['titulo'];
+        $detalle['ruta'] = $ruta;
+        
+        $regBitacora = array(
+            'idMovimiento' => 8,
+            'fechaHora' => date('Y-m-d H:i:s'),
+            'idTabla' => 0,
+            'tablaRelacionada' => 'in_proveedores',
+            'usuario' => session('usuarioId'), 
+            'detalle' => json_encode($detalle)
+        );
+        $sistema->guardarBitacora($regBitacora);
+        // FIN : GUARDAR EN BITACORA  
+
+        return view($ruta, $title);
+    }
 }

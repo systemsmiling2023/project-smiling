@@ -211,6 +211,14 @@ $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filte
     $routes->add('actualizarUsuario', 'UsuariosController::actualizar');
     $routes->add('verificarNombreUsuario', 'UsuariosController::verificarUsuario');
 
+    // 17. Proveedores
+    $routes->get('proveedor', 'ModulosController::proveedor');
+    $routes->get('buscarProveedor', 'ProveedoresController::buscar');
+    $routes->add('almacenarProveedor', 'ProveedoresController::almacenar');
+    $routes->add('actualizarProveedor', 'ProveedoresController::actualizar');
+    $routes->add('obtenerProveedorId', 'ProveedoresController::obtenerId');
+    $routes->add('eliminarProveedor', 'ProveedoresController::eliminar');
+    $routes->get('NombreProveedor','ProveedoresController::selectProveedor');
 });
 
 

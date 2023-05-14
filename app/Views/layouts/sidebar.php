@@ -138,6 +138,12 @@
                                 <p>Cargos Empleados</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('config/proveedor') ?>" class="nav-link">
+                                <i class="fas fa-user-md nav-icon itemMarginLeft"></i>
+                                <p>Proveedores</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
