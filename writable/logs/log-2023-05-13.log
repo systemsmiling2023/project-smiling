@@ -1,0 +1,174 @@
+ERROR - 2023-05-13 18:00:14 --> mysqli_sql_exception: Unknown column 'c.personadId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`nom...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`nom...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`nom...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nom...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('7')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-13 18:00:14 --> Unknown column 'c.personadId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nombres`, `a`.`primerApellido`, `a`.`fechaNacimiento`, CASE
+                                    WHEN b.personaId IS NOT NULL THEN \'empleado\'
+                                    WHEN c.personaId IS NOT NULL THEN \'paciente\'
+                                    WHEN d.personaId IS NOT NULL THEN \'proveedor\'
+                                    ELSE \'\'
+                                END as categoria
+FROM `pe_personas` `a`
+LEFT JOIN `pe_empleados` `b` ON `b`.`personaId` = `a`.`personaId`
+LEFT JOIN `ex_pacientes` `c` ON `c`.`personadId` = `a`.`personaId`
+LEFT JOIN `in_proveedores` `d` ON `d`.`personaId` = `a`.`personaId`
+WHERE MONTH(a.fechaNacimiento) = :MONTH(a.fechaNacimiento):', [...], false)
+ 2 APPPATH\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('7')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-13 18:04:35 --> mysqli_sql_exception: Unknown column 'c.personadId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`nom...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`nom...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`nom...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nom...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-13 18:04:35 --> Unknown column 'c.personadId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nombres`, `a`.`primerApellido`, `a`.`fechaNacimiento`, CASE
+                                    WHEN b.personaId IS NOT NULL THEN \'empleado\'
+                                    WHEN c.personaId IS NOT NULL THEN \'paciente\'
+                                    WHEN d.personaId IS NOT NULL THEN \'proveedor\'
+                                    ELSE \'\'
+                                END as categoria
+FROM `pe_personas` `a`
+LEFT JOIN `pe_empleados` `b` ON `b`.`personaId` = `a`.`personaId`
+LEFT JOIN `ex_pacientes` `c` ON `c`.`personadId` = `a`.`personaId`
+LEFT JOIN `in_proveedores` `d` ON `d`.`personaId` = `a`.`personaId`
+WHERE MONTH(a.fechaNacimiento) = :MONTH(a.fechaNacimiento):', [...], false)
+ 2 APPPATH\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-13 18:08:46 --> mysqli_sql_exception: Unknown column 'c.personadId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`nom...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`nom...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`nom...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nom...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-13 18:08:46 --> Unknown column 'c.personadId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nombres`, `a`.`primerApellido`, `a`.`fechaNacimiento`, CASE
+                                    WHEN b.personaId IS NOT NULL THEN \'empleado\'
+                                    WHEN c.personaId IS NOT NULL THEN \'paciente\'
+                                    WHEN d.personaId IS NOT NULL THEN \'proveedor\'
+                                    ELSE \'\'
+                                END as categoria
+FROM `pe_personas` `a`
+LEFT JOIN `pe_empleados` `b` ON `b`.`personaId` = `a`.`personaId`
+LEFT JOIN `ex_pacientes` `c` ON `c`.`personadId` = `a`.`personaId`
+LEFT JOIN `in_proveedores` `d` ON `d`.`personaId` = `a`.`personaId`
+WHERE MONTH(a.fechaNacimiento) = :MONTH(a.fechaNacimiento):', [...], false)
+ 2 APPPATH\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-13 18:19:02 --> mysqli_sql_exception: Unknown column 'c.personadId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`nom...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`nom...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`nom...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nom...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-13 18:19:02 --> Unknown column 'c.personadId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nombres`, `a`.`primerApellido`, `a`.`fechaNacimiento`, CASE
+                                    WHEN b.personaId IS NOT NULL THEN \'empleado\'
+                                    WHEN c.personaId IS NOT NULL THEN \'paciente\'
+                                    WHEN d.personaId IS NOT NULL THEN \'proveedor\'
+                                    ELSE \'\'
+                                END as categoria
+FROM `pe_personas` `a`
+LEFT JOIN `pe_empleados` `b` ON `b`.`personaId` = `a`.`personaId`
+LEFT JOIN `ex_pacientes` `c` ON `c`.`personadId` = `a`.`personaId`
+LEFT JOIN `in_proveedores` `d` ON `d`.`personaId` = `a`.`personaId`
+WHERE MONTH(a.fechaNacimiento) = :MONTH(a.fechaNacimiento):', [...], false)
+ 2 APPPATH\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-13 18:20:28 --> mysqli_sql_exception: Unknown column 'c.personadId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`nom...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`nom...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`nom...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nom...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-13 18:20:28 --> Unknown column 'c.personadId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`nombres`, `a`.`primerApellido`, `a`.`fechaNacimiento`, CASE
+                                    WHEN b.personaId IS NOT NULL THEN \'empleado\'
+                                    WHEN c.personaId IS NOT NULL THEN \'paciente\'
+                                    WHEN d.personaId IS NOT NULL THEN \'proveedor\'
+                                    ELSE \'\'
+                                END as categoria
+FROM `pe_personas` `a`
+LEFT JOIN `pe_empleados` `b` ON `b`.`personaId` = `a`.`personaId`
+LEFT JOIN `ex_pacientes` `c` ON `c`.`personadId` = `a`.`personaId`
+LEFT JOIN `in_proveedores` `d` ON `d`.`personaId` = `a`.`personaId`
+WHERE MONTH(a.fechaNacimiento) = :MONTH(a.fechaNacimiento):', [...], false)
+ 2 APPPATH\Models\Agenda\CumpleanerosModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): App\Models\Agenda\CumpleanerosModel->cumplePorMes('1')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-13 18:21:07 --> Call to undefined method App\Models\Agenda\CumpleanerosModel::cumpleXMes
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): CodeIgniter\Model->__call('cumpleXMes', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-13 18:21:21 --> Call to undefined method App\Models\Agenda\CumpleanerosModel::cumpleXMes
+in SYSTEMPATH\Model.php on line 841.
+ 1 APPPATH\Controllers\Agenda\CumpleaneroController.php(13): CodeIgniter\Model->__call('cumpleXMes', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Agenda\CumpleaneroController->buscar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Agenda\CumpleaneroController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
