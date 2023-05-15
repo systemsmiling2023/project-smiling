@@ -36,10 +36,12 @@ class ProveedorModel extends Model
     public function nombreProveedor()
     {
         $db = \Config\Database::connect();
+        $tipoPersona='J';
         $builder = $db->table('pe_personas a');
         $builder->select('
         a.nombres, a.primerApellido, a.segundoApellido, a.tercerApellido, a.personaId 
         ');
+        $builder->where('a.tipoPersona',$tipoPersona);
         $datos = $builder->get()->getResultArray();
         return $datos;
     }

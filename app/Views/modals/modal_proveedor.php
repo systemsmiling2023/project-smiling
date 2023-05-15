@@ -13,7 +13,7 @@
                 <form class="form">
                     <div class="row">
                         <div class="col-sm-12">
-                            <label>Empleado</label>
+                            <label>Proveedor</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
