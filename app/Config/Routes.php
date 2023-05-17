@@ -219,6 +219,14 @@ $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filte
     $routes->add('obtenerProveedorId', 'ProveedoresController::obtenerId');
     $routes->add('eliminarProveedor', 'ProveedoresController::eliminar');
     $routes->get('NombreProveedor','ProveedoresController::selectProveedor');
+
+    // 18. Medicamentos
+    $routes->get('medicamento', 'ModulosController::medicamento');
+    $routes->get('buscarMedicamento', 'MedicamentosController::buscar');
+    $routes->add('almacenarMedicamento', 'MedicamentosController::almacenar');
+    $routes->add('actualizarMedicamento', 'MedicamentosController::actualizar');
+    $routes->add('obtenerMedicamentoId', 'MedicamentosController::obtenerId');
+    $routes->add('eliminarMedicamento', 'MedicamentosController::eliminar');
 });
 
 

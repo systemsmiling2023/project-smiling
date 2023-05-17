@@ -1,0 +1,54 @@
+CRITICAL - 2023-05-15 22:09:46 --> Invalid file: "modulos/configuracion/medicamento.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/medicamento.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/medicamento', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(359): view('modulos/configuracion/medicamento', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->medicamento()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 22:10:57 --> Invalid file: "modulos/configuracion/medicamento.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/medicamento.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/medicamento', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(359): view('modulos/configuracion/medicamento', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->medicamento()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 22:10:59 --> Invalid file: "modulos/configuracion/medicamento.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/medicamento.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/medicamento', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(359): view('modulos/configuracion/medicamento', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->medicamento()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 22:11:47 --> Invalid file: "modulos/configuracion/medicamento.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/medicamento.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/medicamento', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(359): view('modulos/configuracion/medicamento', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->medicamento()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 22:11:50 --> Invalid file: "modulos/configuracion/medicamento.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/medicamento.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/medicamento', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(359): view('modulos/configuracion/medicamento', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->medicamento()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-15 22:11:53 --> Invalid file: "modulos/configuracion/medicamento.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/medicamento.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/medicamento', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(359): view('modulos/configuracion/medicamento', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->medicamento()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
