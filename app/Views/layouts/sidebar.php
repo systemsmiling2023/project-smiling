@@ -150,6 +150,12 @@
                                 <p>Medicamentos</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('config/conversion') ?>" class="nav-link">
+                                <i class="fas fa-user-md nav-icon itemMarginLeft"></i>
+                                <p>Conversiones</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
