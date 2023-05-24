@@ -27,7 +27,7 @@ class MedicamentosController extends BaseController
     {
         $medicamento = new MedicamentoModel();
         $data = [
-            'medicamento' => $this->request->getPost('medicamento')
+            'medicamento' => $this->request->getPost('medicamento'),
         ];
         $medicamento->guardarMedicamento($data);
         return $medicamento;

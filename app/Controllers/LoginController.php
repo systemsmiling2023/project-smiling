@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\LoginModel;
 use App\Models\SessionModel;
 use App\Models\SistemaModel;
+use App\Models\InsumoModel;
 use CodeIgniter\Controller;
 
 
@@ -129,6 +130,14 @@ class LoginController extends BaseController
         echo json_encode($result);
     }
 
+    public function caducos()
+    {
+        $insumo = new InsumoModel();
+        $data['insumo'] = $insumo->obtenerElemento();
+        return $this->response->setJSON($data);
+        return $data;
+    }
+
     public function salir()
     {
         $sesion = new SessionModel();
@@ -150,4 +159,6 @@ class LoginController extends BaseController
         $sesion->eliminarSesion();
         return redirect()->to('login');
     }
+    
+    
 }

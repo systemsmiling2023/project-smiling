@@ -21,7 +21,7 @@
                                     </div>
                                 </div>
                                 <input type="hidden" id="medicamentoId" name="medicamentoId" readonly>
-                                <input type="textarea" class="form-control" id="medicamento" name="medicamento" placeholder="Escriba nombre de Medicamento" style="text-transform:uppercase">
+                                <input type="text" class="form-control" id="medicamento" name="medicamento" placeholder="Escriba nombre de Medicamento" style="text-transform:uppercase">
                                 <span id="error_medicamento" class="text-warning col-md-12"></span>
                             </div>
                         </div>
