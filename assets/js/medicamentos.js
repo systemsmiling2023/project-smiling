@@ -63,13 +63,13 @@ function mostrarMedicamentos() {
         success: function (response) {
 
             $.each(response.medicamentoId, function (key, value) {
-                
+                console.log(response);
                 let contenido = /*html*/ `<tr>
                         <td class="text-center">${(key + 1)}</td>
                         <td><i class="fas fa-user"></i> &nbsp; &nbsp; ${value['medicamento']}</td>
                         <td class="text-center">
-                            <button onclick="actualizarMedicamento(${key})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
-                            <button onclick="eliminarMedicamento(${key})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
+                            <button onclick="actualizarMedicamento(${value['medicamentoId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+                            <button onclick="eliminarMedicamento(${$value['medicamentoId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                         </td>
                     </tr>`;
                 $('#bodyMedicamentos').append(contenido);
