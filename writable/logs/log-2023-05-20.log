@@ -1,0 +1,739 @@
+CRITICAL - 2023-05-20 10:36:46 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 882.
+ 1 SYSTEMPATH\Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\LoginController.php(158): CodeIgniter\Model->__call('mostrarJoin', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-20 10:37:23 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 882.
+ 1 SYSTEMPATH\Model.php(641): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(831): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\LoginController.php(158): CodeIgniter\Model->__call('mostrarJoin', [])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-20 17:16:39 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:16:39 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-20 17:18:18 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:18:18 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-20 17:22:28 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:22:28 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-20 17:30:50 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:30:50 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(158): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:32:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:32:35 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:35:41 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-20 17:35:44 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 17:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:35:55 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-20 17:35:58 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:35:58 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:42:37 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-20 17:42:40 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:42:40 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:44:00 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-20 17:44:02 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:44:02 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->notificarCaducidad()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:49:56 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-20 17:50:00 --> mysqli_sql_exception: Unknown column 'b.uniDetId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:50:00 --> Unknown column 'b.uniDetId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `a`.`uniDetId` = `b`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:58:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 17:58:35 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 17:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-20 17:58:38 --> mysqli_sql_exception: Unknown column 'c.insumoId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 17:58:38 --> Unknown column 'c.insumoId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `b`.`insumoId`  = `c`.`insumoId`
+JOIN `in_unidad_detalle` `c` ON `a`.`uniDetId` = `c`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:10:11 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-05-20 18:10:15 --> mysqli_sql_exception: Unknown column 'c.insumoId' in 'on clause' in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `a`.`fec...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `a`.`fec...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `a`.`fec...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fec...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\InsumoModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\smiling\app\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-05-20 18:10:15 --> Unknown column 'c.insumoId' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT `a`.`fechaCaducidad`, `b`.`insumo`
+FROM `in_compra_detalle` `a`
+JOIN `in_insumos` `b` ON `b`.`insumoId`  = `c`.`insumoId`
+JOIN `in_unidad_detalle` `c` ON `a`.`uniDetId` = `c`.`uniDetId`
+WHERE `a`.`fechaCaducidad` < :a.fechaCaducidad:', [...], false)
+ 2 APPPATH\Models\InsumoModel.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:13:58 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:14:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:14:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:14:19 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-20 18:14:24 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:14:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:14:34 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:28:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:28:02 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:30:07 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:30:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:33:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:33:38 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:33:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:35:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:35:12 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:35:16 --> Array to string conversion
+in APPPATH\Controllers\LoginController.php on line 137.
+ 1 APPPATH\Controllers\LoginController.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\LoginController.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:35:50 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:35:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:36:47 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:38:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:38:18 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:39:44 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:50:49 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:55:03 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 18:55:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 18:55:39 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 18:55:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:12:54 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:17:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:17:46 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:17:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:17:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:17:57 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:24:38 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:25:23 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:25:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:31:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:31:21 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:31:25 --> Call to undefined function App\Models\CURDATE()
+in APPPATH\Models\InsumoModel.php on line 21.
+ 1 APPPATH\Controllers\LoginController.php(136): App\Models\InsumoModel->obtenerElemento()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->caducos()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:31:50 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:31:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:32:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:32:36 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:33:30 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:33:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:33:51 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:34:02 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:34:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:34:38 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:34:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:34:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:34:43 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:37:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:37:16 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:37:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:37:48 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:37:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:38:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:38:16 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:38:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:39:06 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:39:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:39:39 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:46:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:46:26 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:46:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:48:35 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 19:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 19:49:38 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 19:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-05-20 20:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-05-20 20:12:17 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-05-20 20:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

@@ -1,0 +1,18 @@
+CRITICAL - 2023-05-18 09:56:17 --> Invalid file: "modulos/configuracion/conversiones.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/conversiones.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/conversiones', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(386): view('modulos/configuracion/conversiones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->conversion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 09:56:26 --> Invalid file: "modulos/configuracion/conversiones.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modulos/configuracion/conversiones.php')
+ 2 SYSTEMPATH\Common.php(1177): CodeIgniter\View\View->render('modulos/configuracion/conversiones', [], true)
+ 3 APPPATH\Controllers\Configuracion\ModulosController.php(386): view('modulos/configuracion/conversiones', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Configuracion\ModulosController->conversion()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Configuracion\ModulosController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

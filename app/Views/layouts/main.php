@@ -51,7 +51,7 @@
         <?= $this->include('layouts/footer') ?>
 
     </div>
-
+    
     <script src="<?= base_url('public/jquery/jquery.min.js') ?>"></script>
     <script src="<?= base_url('public/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('public/jquery-ui/jquery-ui.min.js') ?>"></script>

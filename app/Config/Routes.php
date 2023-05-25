@@ -49,7 +49,7 @@ $routes->group('/', ['namespace' => 'App\Controllers', 'filter' => 'Auth'], func
 
     $routes->add('/home', 'LoginController::home');
     $routes->add('/login', 'LoginController::index');
-
+    $routes->add('notificarCaducidad', 'LoginController::caducos');
 
 });
 
@@ -219,6 +219,24 @@ $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filte
     $routes->add('obtenerProveedorId', 'ProveedoresController::obtenerId');
     $routes->add('eliminarProveedor', 'ProveedoresController::eliminar');
     $routes->get('NombreProveedor','ProveedoresController::selectProveedor');
+
+    // 18. Medicamentos
+    $routes->get('medicamento', 'ModulosController::medicamento');
+    $routes->get('buscarMedicamento', 'MedicamentosController::buscar');
+    $routes->add('almacenarMedicamento', 'MedicamentosController::almacenar');
+    $routes->add('actualizarMedicamento', 'MedicamentosController::actualizar');
+    $routes->add('obtenerMedicamentoId', 'MedicamentosController::obtenerId');
+    $routes->add('eliminarMedicamento', 'MedicamentosController::eliminar');
+
+     // 19. Conversiones
+     $routes->get('conversion', 'ModulosController::conversion');
+     $routes->get('buscarConversion', 'ConversionesController::buscar');
+     $routes->add('almacenarConversion', 'ConversionesController::almacenar');
+     $routes->add('actualizarConversion', 'ConversionesController::actualizar');
+     $routes->add('obtenerConversionId', 'ConversionesController::obtenerId');
+     $routes->add('eliminarConversion', 'ConversionesController::eliminar');
+     $routes->get('NombreUnidad','ConversionesController::selectUnidad');
+     $routes->get('NombreInsumo','ConversionesController::selectInsumo');
 });
 
 

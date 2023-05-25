@@ -44,6 +44,13 @@
     </section>
 </div>
 
+<?= $this->endSection() ?>
+
+<?= $this->section('scripts') ?>
+<!-- JavaScript -->
+<script src="<?= base_url('public/sweetalert2.all.min.js') ?>"></script>
+<script src="<?= base_url('/public/select2/js/select2.min.js') ?>"></script>
 <script src="<?= base_url('assets/js/home.js') ?>"></script>
+<script src="<?= base_url('assets/js/notificarVencimiento.js') ?>"></script>
 
 <?= $this->endSection() ?>
