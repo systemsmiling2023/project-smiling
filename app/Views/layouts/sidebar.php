@@ -156,6 +156,18 @@
                                 <p>Conversiones</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('config/insumos') ?>" class="nav-link">
+                                <i class="fas fa-user-md nav-icon itemMarginLeft"></i>
+                                <p>Insumos</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('config/unidadesMedida') ?>" class="nav-link">
+                                <i class="fas fa-user-md nav-icon itemMarginLeft"></i>
+                                <p>Unidades de Medida</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 

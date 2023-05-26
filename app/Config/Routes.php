@@ -238,6 +238,24 @@ $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filte
      $routes->add('eliminarConversion', 'ConversionesController::eliminar');
      $routes->get('NombreUnidad','ConversionesController::selectUnidad');
      $routes->get('NombreInsumo','ConversionesController::selectInsumo');
+
+    // 20. Unidades de medida
+    $routes->get('unidadesMedida', 'ModulosController::UniMedida');
+    $routes->get('mostrarUnidades', 'UnidadesMedidaController::buscar');
+    $routes->add('eliminarUnidadMedida', 'UnidadesMedidaController::eliminar');
+    $routes->add('almacenarUnidadesMedidas', 'UnidadesMedidaController::almacenar');
+    $routes->add('obtenerUnidadesMedida', 'UnidadesMedidaController::obtenerId');
+    $routes->add('actualizarUnidadesMedidas', 'UnidadesMedidaController::actualizar');
+
+    // 21. Insumos
+    $routes->get('insumos', 'ModulosController::controlInsumos');
+    $routes->get('mostrarInsumos', 'InsumosController::buscar');
+    $routes->get('mostraCategoria', 'InsumosController::categoria');
+    $routes->get('mostraUnidades', 'InsumosController::unidades');
+    $routes->add('almacenarInsumos', 'InsumosController::almacenar');
+    $routes->add('obtenerInsumo', 'InsumosController::obtenerId');
+    $routes->add('actualizarInsumos', 'InsumosController::actualizar');
+    $routes->add('eliminarInsumo', 'InsumosController::eliminar');
 });
 
 

@@ -385,4 +385,58 @@ class ModulosController extends BaseController
 
         return view($ruta, $title);
     }
+
+    public function controlInsumos()
+    {
+        $sistema = new SistemaModel();
+        $title = [
+            "titulo" => "Smiling | Insumos"
+        ];
+        $ruta = 'modulos/configuracion/controlInsumos';
+        
+        // INICIO : GUARDAR EN BITACORA
+        $detalle = array();
+        $detalle['tituloInterfaz'] = $title['titulo'];
+        $detalle['ruta'] = $ruta;
+        
+        $regBitacora = array(
+            'idMovimiento' => 8,
+            'fechaHora' => date('Y-m-d H:i:s'),
+            'idTabla' => 0,
+            'tablaRelacionada' => 'in_insumos',
+            'usuario' => session('usuarioId'), 
+            'detalle' => json_encode($detalle)
+        );
+        $sistema->guardarBitacora($regBitacora);
+        // FIN : GUARDAR EN BITACORA  
+
+        return view($ruta, $title);
+    }
+
+    public function UniMedida()
+    {
+        $sistema = new SistemaModel();
+        $title = [
+            "titulo" => "Smiling | Unidad de Medida"
+        ];
+        $ruta = 'modulos/configuracion/unidadesMedida';
+        
+        // INICIO : GUARDAR EN BITACORA
+        $detalle = array();
+        $detalle['tituloInterfaz'] = $title['titulo'];
+        $detalle['ruta'] = $ruta;
+        
+        $regBitacora = array(
+            'idMovimiento' => 8,
+            'fechaHora' => date('Y-m-d H:i:s'),
+            'idTabla' => 0,
+            'tablaRelacionada' => 'in_unidades_medida',
+            'usuario' => session('usuarioId'), 
+            'detalle' => json_encode($detalle)
+        );
+        $sistema->guardarBitacora($regBitacora);
+        // FIN : GUARDAR EN BITACORA  
+
+        return view($ruta, $title);
+    }
 }
