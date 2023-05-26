@@ -130,14 +130,6 @@ class LoginController extends BaseController
         echo json_encode($result);
     }
 
-    public function caducos()
-    {
-        $insumo = new InsumoModel();
-        $data['insumo'] = $insumo->obtenerElemento();
-        return $this->response->setJSON($data);
-        return $data;
-    }
-
     public function salir()
     {
         $sesion = new SessionModel();
@@ -160,5 +152,25 @@ class LoginController extends BaseController
         return redirect()->to('login');
     }
     
-    
+    // Métodos Notificaciones y Alertas
+
+    public function caducos()
+    {
+        $insumo = new InsumoModel();
+        $data['insumo'] = $insumo->obtenerElemento();
+        return $this->response->setJSON($data);
+        return $data;
+    }
+
+    public function obtenerNotificaciones()
+    {
+        $insumo = new InsumoModel();
+
+        // Obtener los datos de las notificaciones desde modelo
+        $notificaciones = $insumo->obtenerNotificaciones();
+
+        // Devolver las notificaciones como respuesta AJAX
+        return $this->response->setJSON($notificaciones);
+    }
+
 }

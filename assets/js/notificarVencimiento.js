@@ -34,14 +34,15 @@ function caducos() {
     });
 }
 
-    // Función para mostrar notificación
-    function mostrarNotificacion(mensaje) {
-        Swal.fire({
-            title: 'Caducidad de insumo',
-            text: mensaje,
-            icon: 'warning',
-            confirmButtonText: '<i class="fas fa-check"></i> Entendido',
-            confirmButtonColor: '#3085d6',
-        });
-    }
+// Función para mostrar notificación
+function mostrarNotificacion(mensaje) {
+    Swal.fire({
+        title: 'Caducidad de insumo',
+        text: mensaje,
+        icon: 'warning',
+        confirmButtonText: '<i class="fas fa-check"></i> Entendido',
+        confirmButtonColor: '#3085d6',
+    });
+}
+
 

@@ -50,6 +50,7 @@ $routes->group('/', ['namespace' => 'App\Controllers', 'filter' => 'Auth'], func
     $routes->add('/home', 'LoginController::home');
     $routes->add('/login', 'LoginController::index');
     $routes->add('notificarCaducidad', 'LoginController::caducos');
+    $routes->add('obtenerNotificaciones','LoginController::obtenerNotificaciones');
 
 });
 

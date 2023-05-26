@@ -31,4 +31,18 @@ class InsumoModel extends Model
         $updAlertaCitas->where('comDetId', $comDetId);
         $updAlertaCitas->update($data);
     }
+
+    public function obtenerNotificaciones()
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('in_insumos');
+        $cantidadMin = 10; // Cantidad mínima para generar la notificación
+
+        // Consultar los insumos que tienen cantidad actual menor o igual a la cantidad mínima
+        $builder->select('*');
+        $builder->where('cantidadAct <=', $cantidadMin);
+        $datos = $builder->get()->getResultArray();
+
+        return $datos;
+    }
 }
