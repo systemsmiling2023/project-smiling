@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\LoginModel;
 use App\Models\SessionModel;
 use App\Models\SistemaModel;
-use App\Models\InsumoModel;
 use CodeIgniter\Controller;
 
 
@@ -152,25 +151,5 @@ class LoginController extends BaseController
         return redirect()->to('login');
     }
     
-    // Métodos Notificaciones y Alertas
-
-    public function caducos()
-    {
-        $insumo = new InsumoModel();
-        $data['insumo'] = $insumo->obtenerElemento();
-        return $this->response->setJSON($data);
-        return $data;
-    }
-
-    public function obtenerNotificaciones()
-    {
-        $insumo = new InsumoModel();
-
-        // Obtener los datos de las notificaciones desde modelo
-        $notificaciones = $insumo->obtenerNotificaciones();
-
-        // Devolver las notificaciones como respuesta AJAX
-        return $this->response->setJSON($notificaciones);
-    }
 
 }

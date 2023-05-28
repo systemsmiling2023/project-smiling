@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class InsumoModel extends Model
+class NotificacionModel extends Model
 {
     protected $table = 'in_compra_detalle';
     protected $primaryKey = 'comDetId';
@@ -14,12 +14,12 @@ class InsumoModel extends Model
         $db = \Config\Database::connect();
         $builder = $db->table('in_compra_detalle a');
         $builder->select('
-        a.fechaCaducidad, c.insumo, a.notifAlertas
+        a.comDetId, a.fechaCaducidad, c.insumo, a.notifAlertas, c.fechaUltCompra, c.cantidadAct
         ');
         $builder->join('in_unidad_detalle b', 'a.uniDetId = b.uniDetId');
         $builder->join('in_insumos c','c.insumoId = b.insumoId');
         $builder->where('a.fechaCaducidad < CURDATE()');
-        $builder->where('a.notifAlertas', 0);
+        //$builder->where('a.notifAlertas <',5);
         $datos = $builder->get()->getResultArray();
         return $datos;
     }
@@ -27,7 +27,7 @@ class InsumoModel extends Model
     public function agregarUnoAlertaInsumo($comDetId, $notifAlertas){
         $db = \Config\Database::connect();
         $updAlertaCitas = $db->table('in_compra_detalle');
-        $data = array('notifAlertas' => $notifAlertas);
+        $data = ['notifAlertas'=> $notifAlertas];
         $updAlertaCitas->where('comDetId', $comDetId);
         $updAlertaCitas->update($data);
     }

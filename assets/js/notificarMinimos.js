@@ -13,7 +13,7 @@ $(document).ready(function() {
                 // Crear el elemento de notificación
                 var elementoNotificacion = $('<a>', {
                     class: 'dropdown-item',
-                    href: '#'
+                    href: '#'  //esta referencia se puede sustituir por la ruta ya sea de existencias o compras
                 });
 
                 // Agregar el contenido de la notificación

@@ -439,4 +439,6 @@ class ModulosController extends BaseController
 
         return view($ruta, $title);
     }
+
+    
 }

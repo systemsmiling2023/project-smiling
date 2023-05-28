@@ -49,8 +49,12 @@ $routes->group('/', ['namespace' => 'App\Controllers', 'filter' => 'Auth'], func
 
     $routes->add('/home', 'LoginController::home');
     $routes->add('/login', 'LoginController::index');
-    $routes->add('notificarCaducidad', 'LoginController::caducos');
-    $routes->add('obtenerNotificaciones','LoginController::obtenerNotificaciones');
+    
+    // Alertas y Notificaciones
+    $routes->add('notificarCaducidad', 'NotificacionesController::caducos');
+    $routes->add('obtenerNotificaciones','NotificacionesController::obtenerNotificaciones');
+    $routes->get('insumosVencidos','NotificacionesController::expirados');
+    $routes->post('incrementarContadorAlertas','NotificacionesController::contarAlertas');
 
 });
 
@@ -256,6 +260,8 @@ $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filte
     $routes->add('obtenerInsumo', 'InsumosController::obtenerId');
     $routes->add('actualizarInsumos', 'InsumosController::actualizar');
     $routes->add('eliminarInsumo', 'InsumosController::eliminar');
+
+    
 });
 
 
