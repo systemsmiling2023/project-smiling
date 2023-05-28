@@ -16,8 +16,20 @@ class NotificacionesController extends BaseController
     public function caducos()
     {
         $notificacion = new NotificacionModel();
-        
+        $sistema = new SistemaModel();
+
         $data['insumo'] = $notificacion->obtenerElemento();
+
+        $regBitacora = array(
+            'idMovimiento' => 8,
+            'fechaHora' => date('Y-m-d H:i:s'),
+            'idTabla' => 0,
+            'tablaRelacionada' => 'in_compra_detalle',
+            'usuario' => session('usuarioId'), 
+            'detalle' => json_encode($data)
+        );
+        $sistema->guardarBitacora($regBitacora);
+
         return $this->response->setJSON($data);
         return $data;
     }
@@ -25,14 +37,34 @@ class NotificacionesController extends BaseController
     public function contarAlertas()
     {
         $notificacion = new NotificacionModel();
+        $sistema = new SistemaModel();
+
         $id = $this->request->getPost('id');
+        $datoActualizar = $id;
         //$notifAlertas = $this->getPost('notifAlertas');
         $data = [
             'notifAlertas' => $this->request->getPost('notifAlertas')
         ];
+
+        $detalleBitacora = array();
+        $detalleBitacora['dato_anterior'] = $datoActualizar;
+        $detalleBitacora['dato_nuevo'] = $data;
+        $detalleBitacora = json_encode($detalleBitacora);
+
+        // GUARDAR EN BITACORA
+        $regBitacora = array(
+            'idMovimiento' => 6,
+            'fechaHora' => date('Y-m-d H:i:s'),
+            'idTabla' => $id,
+            'tablaRelacionada' => 'in_compra_detalle',
+            'usuario' => session('usuarioId'), 
+            'detalle' => $detalleBitacora
+        );
+
         if(intval($data['notifAlertas']) < 4){
             $notifAlertas = intval($data['notifAlertas']) + 1 ;
             $notificacion->agregarUnoAlertaInsumo($id, $notifAlertas);
+            $sistema->guardarBitacora($regBitacora);
         } 
         
         return $notificacion;
@@ -41,12 +73,35 @@ class NotificacionesController extends BaseController
     public function obtenerNotificaciones()
     {
         $notificacion = new NotificacionModel();
+        $sistema = new SistemaModel();
 
-        // Obtener los datos de las notificaciones desde modelo
-        $notificaciones = $notificacion->obtenerNotificaciones();
+        // Verificar si el usuario tiene el rol de administrador
+        if (session('rolId') === 'ADMIN') {
+            // Obtener los datos de las notificaciones desde modelo
+            $notificaciones = $notificacion->obtenerNotificaciones();
 
-        // Devolver las notificaciones como respuesta AJAX
-        return $this->response->setJSON($notificaciones);
+            $detalleBitacora = array();
+            $detalleBitacora[] = $notificaciones;
+            $detalleBitacora = json_encode($detalleBitacora);
+
+            // GUARDAR EN BITACORA
+            $regBitacora = array(
+                'idMovimiento' => 8,
+                'fechaHora' => date('Y-m-d H:i:s'),
+                'idTabla' => 0,
+                'tablaRelacionada' => 'in_insumos',
+                'usuario' => session('usuarioId'), 
+                'detalle' => $detalleBitacora
+            );
+
+            $sistema->guardarBitacora($regBitacora);
+            
+            // Devolver las notificaciones como respuesta AJAX
+            return $this->response->setJSON($notificaciones);
+        } else {
+            // Si el usuario no tiene el rol de administrador, devolver una respuesta vacía
+            return $this->response->setJSON([]);
+        }        
     }
 
     public function expirados()

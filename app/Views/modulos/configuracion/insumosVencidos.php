@@ -12,6 +12,8 @@
 
 <?= $this->section('content') ?>
 
+<?php if (session('rolId') === 'ADMIN'): ?>
+
 <div class="content-wrapper">
     <?= $this->include('layouts/header') ?>
 
@@ -54,7 +56,7 @@
         </div>
     </section>
 </div>
-
+<?php endif; ?>
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
