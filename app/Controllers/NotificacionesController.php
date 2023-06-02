@@ -76,7 +76,7 @@ class NotificacionesController extends BaseController
         $sistema = new SistemaModel();
 
         // Verificar si el usuario tiene el rol de administrador
-        if (session('rolId') === 'ADMIN') {
+        if (session('rolId') === '1') {
             // Obtener los datos de las notificaciones desde modelo
             $notificaciones = $notificacion->obtenerNotificaciones();
 

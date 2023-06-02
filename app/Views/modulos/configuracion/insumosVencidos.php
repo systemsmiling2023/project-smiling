@@ -12,7 +12,7 @@
 
 <?= $this->section('content') ?>
 
-<?php if (session('rolId') === 'ADMIN'): ?>
+<?php if (session('rolId') === '1'): ?>
 
 <div class="content-wrapper">
     <?= $this->include('layouts/header') ?>
