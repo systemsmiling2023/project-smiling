@@ -52,7 +52,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url('dashboard') ?>" class="nav-link">
+                            <a href="<?= base_url('expediente/main') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon itemMarginLeft"></i>
                                 <p>Expediente</p>
                             </a>

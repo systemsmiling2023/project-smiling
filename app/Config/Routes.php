@@ -72,6 +72,11 @@ $routes->group('agenda', ['namespace' => 'App\Controllers\Agenda', 'filter' => '
     $routes->add('mostrarSucursal','CumpleaneroController::mostrarSucursal');
 });
 
+$routes->group('expediente', ['namespace' => 'App\Controllers\Expediente', 'filter' => 'Auth'], function ($routes) {
+    $routes->get('main', 'ModulosController::expediente');
+    $routes->get('paciente','ModulosController::paciente');
+    //$routes->get('pacienteform','PacientesController::formulario');
+});
 
 // Definiendo grupos para los de tipo Admin
 $routes->group('config', ['namespace' => 'App\Controllers\Configuracion', 'filter' => 'Admin'], function ($routes) {
