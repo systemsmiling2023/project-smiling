@@ -13,30 +13,6 @@
                 <form class="form" id="frmAgregarPaciente">
                     <div class="row">
                         <div class="col-sm-4">
-                            <label>Código</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <i class="fas fa-key"></i>
-                                    </div>
-                                </div>
-                                <input type="hidden" id="pacienteId" name="pacienteId" readonly>
-                                <input type="text" class="form-control" id="codPaciente" name="codPaciente"
-                                    style="text-transform:uppercase">
-                            </div>
-                            <label>Medio</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <i class="fas fa-globe"></i>
-                                    </div>
-                                </div>
-                                <select class="form-control" name="medioId" id="medioId"
-                                    style="text-transform:uppercase">
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
                             <label>Paciente</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
@@ -48,16 +24,18 @@
                                     style="text-transform:uppercase">
                                 </select>
                             </div>
-                            <label>Intereses</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Código</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
-                                        <i class="fas fa-heart"></i>
+                                        <i class="fas fa-key"></i>
                                     </div>
                                 </div>
-                                <select class="form-control" name="interesId" id="interesId"
+                                <input type="hidden" id="pacienteId" name="pacienteId" readonly>
+                                <input type="text" class="form-control" id="codPaciente" name="codPaciente"
                                     style="text-transform:uppercase">
-                                </select>
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -71,17 +49,6 @@
                                 <select name="estado" id="estado" class="form-control" style="text-transform:uppercase">
                                     <option value="1">ACTIVO</option>
                                     <option value="0">INACTIVO</option>
-                                </select>
-                            </div>
-                            <label>Patologías</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <i class="fas fa-disease"></i>
-                                    </div>
-                                </div>
-                                <select class="form-control" name="patologiaId" id="patologiaId"
-                                    style="text-transform:uppercase">
                                 </select>
                             </div>
                         </div>

@@ -43,8 +43,6 @@
                                         <th>Código</th>
                                         <th>Paciente</th>
                                         <th>Estado</th>
-                                        <th>Intereses</th>
-                                        <th>Patologías</th>
                                         <th class="text-center" width="10%">Acciones</th>
                                     </tr>
                                 </thead>
@@ -63,6 +61,7 @@
 <input type="hidden" id="txtPacienteId">
 
 <?= $this->include('modals/modal_paciente') ?>
+<?= $this->include('modals/modal_paciente_medios')?>
 
 <?= $this->endSection() ?>
 

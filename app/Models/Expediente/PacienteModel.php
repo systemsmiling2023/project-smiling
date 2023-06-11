@@ -77,7 +77,19 @@ class PacienteModel extends Model
         return $datos;
     }
 
-    public function PacienteJoin()
+    public function mostrarPacienteTab()
+    {
+        $db = \Config\Database::connect();
+        $builder = $db->table('ex_pacientes pac ');
+        $builder->select('
+        pac.pacienteId, pac.codPaciente, pac.estado, pac.personaId, per.nombres, per.primerApellido
+        ');
+        $builder->join('pe_personas per', 'pac.personaId = per.personaId');
+        $datos = $builder->get()->getResultArray();
+        return $datos;
+    }
+
+    public function pacienteJoin()
     {
         $db = \Config\Database::connect();
         $builder = $db->table('ex_pacientes a');

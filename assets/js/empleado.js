@@ -327,7 +327,6 @@ function actualizarProfesion(id) {
 function empleadoProfesion(id, nombrePersona) {
 
     $('#txtEmpleadoId').val(id);
-
     $('#nombreEmpleado').empty();
     $('#empProfId').val(id);
     var empleado = `<h5>&nbsp;&nbsp;${nombrePersona}</h5>`;
@@ -336,19 +335,6 @@ function empleadoProfesion(id, nombrePersona) {
     $('#nombreEmpleado').append(empleado);
     mostrarProfesion(id);
 
-    // $('#btn_guardarProfesion').on('click', function () {
-    //     guardarEmpleadoProfesion(id);
-    // });
-
-    // $('#btnAddEmpleadoProfesion').on('click', function () {
-    //     profesion();
-    //     $('#empProfId ').val('');
-    //     $('#empleadoProfesionModalLabel').html('Nueva Profesión');
-    //     $('#empleadoProfesionModal').modal('show');
-    //     $('#profesionId').focus();
-    // });
-
-    // profesion();
 }
 
 $('#btn_guardarProfesion').on('click', function () {

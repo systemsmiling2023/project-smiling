@@ -73,9 +73,24 @@ $routes->group('agenda', ['namespace' => 'App\Controllers\Agenda', 'filter' => '
 });
 
 $routes->group('expediente', ['namespace' => 'App\Controllers\Expediente', 'filter' => 'Auth'], function ($routes) {
+    // EXPEDIENTE
+    //1. Paciente
     $routes->get('main', 'ModulosController::expediente');
     $routes->get('paciente','ModulosController::paciente');
+    $routes->add('almacenarPaciente', 'PacientesController::almacenar');
+    $routes->add('actualizarPaciente', 'PacientesController::actualizar');
+    $routes->add('obtenerPacienteId', 'PacientesController::obtenerId');
+    $routes->add('eliminarPaciente', 'PacientesController::eliminar');
+    $routes->get('mostrarPacientes', 'PacientesController::buscar');
+    $routes->get('nombrePaciente', 'PacientesController::selectPaciente');
+    $routes->get('nombreMedios', 'PacientesController::selectMedio');
+    $routes->get('nombreIntereses', 'PacientesController::selectInteres');
+    $routes->get('nombrePatologia', 'PacientesController::selectPatologia');
     //$routes->get('pacienteform','PacientesController::formulario');
+
+    //2. Paciente Medios
+    $routes->add('agregarPacMedios', 'PacientesMediosController::almacenar');
+    $routes->post('mostrarPacMedios', 'PacientesMediosController::buscar');
 });
 
 // Definiendo grupos para los de tipo Admin

@@ -1,0 +1,125 @@
+CRITICAL - 2023-06-06 10:41:51 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-06 21:23:25 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:23:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:23:33 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:23:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:23:57 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:24:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:24:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:24:43 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:25:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:25:12 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:25:20 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:25:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:25:22 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:25:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:25:31 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:27:06 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:27:11 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-06 21:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-06 21:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-06 21:27:27 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

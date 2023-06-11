@@ -4,6 +4,7 @@ namespace App\Controllers\Expediente;
 
 use App\Controllers\BaseController;
 use App\Models\Expediente\PacienteModel;
+use App\Models\Expediente\PacienteMedioModel;
 use App\Models\SistemaModel;
 
 class PacientesController extends BaseController
@@ -11,7 +12,7 @@ class PacientesController extends BaseController
     public function buscar()
     {
         $paciente = new PacienteModel();
-        $data['pacienteId'] = $paciente->PacienteJoin();
+        $data['pacienteId'] = $paciente->mostrarPacienteTab();
         return $this->response->setJSON($data);
     }
 
@@ -32,6 +33,7 @@ class PacientesController extends BaseController
             'personaId' => $this->request->getPost('personaId')
         ];
         $paciente->guardarPaciente($data);
+        
         return $paciente;
     }
 
