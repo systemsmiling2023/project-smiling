@@ -37,4 +37,12 @@ class PacientesMediosController extends BaseController
         
         return $pacMedios;
     }
+
+    public function eliminar()
+    {
+        $pacMedios = new PacienteMedioModel();
+        $id = $this->request->getPost('id');
+        $pacMedios->eliminarPacMedio($id);
+        return $pacMedios;
+    }
 }

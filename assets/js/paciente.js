@@ -199,6 +199,7 @@ function obtenerNumeroCorrelativo() {
 
 /////////////////// FUNCIONALIDAD DE MEDIOS///////////////////
 function pacMedios(pacienteId, paciente) {
+    console.log(pacienteId);
     $("#pacienteId-medios").val(pacienteId);
     $('#pacienteMediosModal').modal('show');
     $('#pacienteMediosModalLabel').html(`Medios - Paciente: ${paciente}`);
@@ -215,7 +216,7 @@ function pacMedios(pacienteId, paciente) {
 
 function guardarPacienteMedios(pacienteId) {
 
-    if ($('#medioId').val() == "") {
+    if ($('#medioId').val() == "" || $('#fechaRegistro').val() == "") {
         Swal.fire({
             position: 'top-end',
             icon: 'warning',
@@ -300,15 +301,65 @@ function mostrarMedios(pacienteId) {
                             <td>&nbsp; &nbsp; ${value['fechaRegistro']} </td>
                             <td>
                                 <button type="button" onclick="actualizarPacMedios(${value['pacMedId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
-                                <button type="button" onclick="eliminarPacMedios(${value['pacMedId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
+                                <button type="button" onclick="eliminarPacMedios(${value['pacMedId']}, ${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>`;
             });
-            console.log(contenido);
             $('#bodyPacienteMedios').html(contenido);
+            console.log(pacienteId);
         }
     });
 }
+
+function actualizarPacMedios(id) {
+    $('#accionMedios').val('actualizar');
+    mostrarOcultarFormulario('frmPacienteMedios', 'divBtnFrmPacienteMedios', 'mostrar');
+    $.ajax({
+        url: "obtenerPacMediosId",
+        data: { id: id },
+        type: "POST",
+        success: function (response) {
+            $('#pacienteId').val(response.pacMedId.pacienteId);
+            $('#medioId').val(response.pacMedId.medioId);
+            $('#fechaRegistro').val(response.pacMedId.fechaRegistro);
+        }
+    });
+}
+
+function eliminarPacMedios(id, pacienteId) {
+    Swal.fire({
+        title: '¿Está seguro?',
+        text: "Esta acción no podrá revertirse",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#283747',
+        confirmButtonText: 'Borrar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "eliminarPacMedios",
+                data: { id: id },
+                type: "POST",
+                success: function (response) {
+                    Swal.fire(
+                        '¡Hecho!',
+                        'Elemento eliminado con éxito',
+                        'success'
+                    );
+                    mostrarMedios(pacienteId);
+                }
+            });
+        } else {
+            Swal.fire(
+                'Aviso',
+                'Parece que algo salió mal',
+                'warning'
+            );
+        }
+    });
+};
 
 function mostrarOcultarFormulario(frm, divBtn, mostrarOcultar) {
     if (mostrarOcultar == "mostrar") {

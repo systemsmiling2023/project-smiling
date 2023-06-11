@@ -548,3 +548,83 @@ INFO - 2023-06-10 18:09:12 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-06-10 18:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-10 18:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-10 18:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:14:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:14:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-10 19:18:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-10 19:54:12 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 19:54:17 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 19:54:19 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 19:55:09 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 19:56:36 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 19:56:39 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 19:57:16 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-10 20:00:33 --> Undefined variable $paciente
+in APPPATH\Controllers\Expediente\PacientesMediosController.php on line 46.
+ 1 APPPATH\Controllers\Expediente\PacientesMediosController.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $paciente', 'APPPATH\\Controllers\\Expediente\\PacientesMediosController.php', 46)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesMediosController->eliminar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesMediosController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
