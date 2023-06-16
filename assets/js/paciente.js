@@ -88,6 +88,7 @@ function mostrarPaciente() {
                             <button onclick="eliminarPaciente(${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                             <button onclick="pacMedios(${value['pacienteId']}, '${paciente}')" class="btn btn-outline-info btn-sm" title="Medios"><i class="fas fa-globe"></i></button>
                             <button onclick="pacInteres(${value['pacienteId']}, '${paciente}')" class="btn btn-outline-info btn-sm" title="Interes"><i class="fas fa-heart"></i></button>
+                            <button onclick="patologias(${value['pacienteId']}, '${paciente}')" class="btn btn-outline-info btn-sm" title="Interes"><i class="fas fa-disease"></i></button>
                         </td>
                     </tr>`;
 
@@ -341,7 +342,7 @@ function mostrarOcultarFormulario(frm, divBtn, mostrarOcultar) {
 }
 
 /////////////////// FUNCIONALIDAD DE INTERESES///////////////////
-function pacInteres(pacienteId, paciente) {
+function patologias(pacienteId, paciente) {
     //$('#collapseExample').show();
     $('#btn_guardar_interes').hide();
     $("#pacienteId-interes").val(pacienteId);
@@ -494,6 +495,82 @@ function eliminarPacInteres(id, pacienteId) {
     });
 };
 
+/////////////////// FUNCIONALIDAD DE PATOLOGIAS///////////////////
+function patologias(pacienteId, paciente) {
+    $('#btn_guardar_patologia').hide();
+    $("#pacienteId-patologia").val(pacienteId);
+    $('#pacientePatologiaModal').modal('show');
+    $('#pacientePatologiaModalLabel').html(`Patologías - Paciente: ${paciente}`);
+    
+    mostrarPatologias(pacienteId);
+    showHide();
+
+    $('#btn_guardar_patologia').on('click', function () {
+        guardarPacPatologia(pacienteId);
+        $('#collapseExamplePatologia').hide();
+    })
+   
+    selectPatologia();
+}
+
+function showHide() {
+    $('#showHide').on('click', function () {
+        
+        if ($(this).hasClass('btn-primary')) {
+            $('#btn_guardar_patologia').show();
+            $(this).removeClass('btn-primary');
+            $(this).addClass('btn-secondary');
+            $(this).text('Cancelar');
+            
+        } else {
+            $(this).removeClass('btn-secondary');
+            $(this).addClass('btn-primary');
+            $(this).text(' Agregar Patología');
+            $('#btn_guardar_patologia').hide();
+        }
+    });
+}
+
+function guardarPacPatologia(pacienteId) {
+    
+    if (($('#patologiaId').val() == "")) {
+        Swal.fire({
+            title: 'Todos los datos son requeridos',
+            text: "Vuelva a intentarlo!",
+            icon: 'warning',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    } else {
+        // Si el interesPacienteId  viene vacío es porque es agregar
+        if ($('#patologiaPacienteId').val() == "") {
+            url = "guardarPacPatologia";
+            data = {
+                patologiaId: $('#patologiaId').val(),
+                pacienteId: pacienteId,
+            };
+        } else {
+            url = "actualizarPacPatologia";
+            data = {
+                id: $('#patologiaPacienteId').val(),
+                patologiaId: $('#patologiaId').val(),
+            }
+        }
+        
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (response) {
+                $('#pacientePatologiaModal').modal('hide');
+                $('#pacientePatologiaModal').find('input').val('');
+                mostrarPatologias(pacienteId);
+            }
+        });
+    }
+}
+
+
 function selectPatologia() {
     $('#patologiaId').empty();
     $.ajax({
@@ -514,5 +591,63 @@ function selectPatologia() {
         }
     });
 }
+
+function mostrarPatologias(pacienteId) {
+    $('#bodyPacientePatologia').html('');
+    $.ajax({
+        type: "POST",
+        data: { id: pacienteId },
+        url: "mostrarPacPatologia",
+        success: function (response) {
+            let contenido = '';
+            $.each(response.patologiaPacienteId, function (key, value) {
+                contenido += `<tr>
+                            <td class="text-center">${(key + 1)}</td>
+                            <td value="${value['patologiaId']}"><i class="fas fa-id-card"></i> &nbsp; &nbsp; ${value['patologia'].toUpperCase()} </td>
+                            <td>
+                                <button type="button" onclick="eliminarPacPatologia(${value['patologiaPacienteId']}, ${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>`;
+            });
+            $('#bodyPacientePatologia').html(contenido);
+            //console.log(pacienteId);
+        }
+    });
+}
+
+function eliminarPacPatologia(id, pacienteId) {
+    Swal.fire({
+        title: '¿Está seguro?',
+        text: "Esta acción no podrá revertirse",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#283747',
+        confirmButtonText: 'Borrar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: "eliminarPacPatologia",
+                data: { id: id },
+                type: "POST",
+                success: function (response) {
+                    Swal.fire(
+                        '¡Hecho!',
+                        'Elemento eliminado con éxito',
+                        'success'
+                    );
+                    mostrarPatologias(pacienteId);
+                }
+            });
+        } else {
+            Swal.fire(
+                'Aviso',
+                'Parece que algo salió mal',
+                'warning'
+            );
+        }
+    });
+};
 
 
