@@ -43,7 +43,7 @@
                     </div>
                     <div id="divBtnFrmPacienteInteres" class="row mb-4">
                         <div class="col-3 offset-9">
-                            <button type="button" class="btn btn-primary btn-block"
+                            <button id="plus" type="button" class="btn btn-primary btn-block"
                             data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i
                                     class="fas fa-plus"></i> Agregar Intereses</button>
                         </div>

@@ -97,6 +97,8 @@ $routes->group('expediente', ['namespace' => 'App\Controllers\Expediente', 'filt
     //3. Paciente Intereses
     $routes->add('mostrarPacInteres', 'PacientesInteresController::buscar');
     $routes->add('agregarPacInteres', 'PacientesInteresController::almacenar');
+    $routes->add('actualizarPacInteres', 'PacientesInteresController::actualizar');
+    $routes->post('eliminarPacInteres', 'PacientesInteresController::eliminar');
 });
 
 // Definiendo grupos para los de tipo Admin

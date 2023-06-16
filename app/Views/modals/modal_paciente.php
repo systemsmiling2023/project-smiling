@@ -24,7 +24,7 @@
                                     style="text-transform:uppercase">
                                 </select>
                             </div>
-                            <label>Medios</label>
+                            <!--<label>Medios</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
@@ -34,7 +34,7 @@
                                 <input type="hidden" id="pacMedId" name="pacMedId" value="agregar">
                                 <select class="form-control" id="medioId" name="medioId">
                                 </select>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="col-sm-4">
                             <label>Código</label>
@@ -48,7 +48,7 @@
                                 <input type="text" class="form-control" id="codPaciente" name="codPaciente"
                                     style="text-transform:uppercase">
                             </div>
-                            <label>Intereses</label>
+                            <!--<label>Intereses</label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">
@@ -58,7 +58,7 @@
                                 <input type="hidden" id="interesPacienteId" name="interesPacienteId" value="agregar">
                                 <select class="form-control" id="interesId" name="interesId">
                                 </select>
-                            </div>
+                            </div>-->
                         </div>
                         <div class="col-sm-4">
                             <label>Estado</label>

@@ -29,7 +29,6 @@ class PacientesInteresController extends BaseController
     {
         $pacInteres = new PacienteInteresModel();
         $data = [
-            'interesPacienteId' => $this->request->getPost('interesPacienteId'),
             'interesId' => $this->request->getPost('interesId'),
             'pacienteId' => $this->request->getPost('pacienteId')
         ];
@@ -43,6 +42,18 @@ class PacientesInteresController extends BaseController
         $pacInteres = new PacienteInteresModel();
         $id = $this->request->getPost('id');
         $pacInteres->eliminarPacInteres($id);
+        return $pacInteres;
+    }
+
+    public function actualizar()
+    {
+        $pacInteres = new PacienteInteresModel();
+        $id = $this->request->getPost('id');
+        $data = [
+            'interesId' => $this->request->getPost('interesId'),
+            'pacienteId' => $this->request->getPost('pacienteId'),
+        ];
+        $pacInteres->actualizarPacInteres($id, $data);
         return $pacInteres;
     }
 }
