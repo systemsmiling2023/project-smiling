@@ -4,7 +4,6 @@ namespace App\Controllers\Expediente;
 
 use App\Controllers\BaseController;
 use App\Models\Expediente\PacienteModel;
-use App\Models\Expediente\PacienteMedioModel;
 use App\Models\SistemaModel;
 
 class PacientesController extends BaseController

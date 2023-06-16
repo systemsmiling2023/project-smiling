@@ -23,28 +23,21 @@
                                             <i class="fas fa-heart"></i>
                                         </div>
                                     </div>
-                                    <input type="hidden" id="interesPacienteId" name="interesPacienteId"
-                                        value="agregar">
+                                    <input type="hidden" id="interesPacienteId" name="interesPacienteId">
                                     <select class="form-control" id="interesId" name="interesId">
                                     </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-4">
-                            <div class="col-3 offset-6">
-                                <button type="button" class="btn btn-primary btn-block"
-                                    id="btn_guardar_interes">Guardar</button>
-                            </div>
-                            <div class="col-3">
-                                <button type="button" class="btn btn-secondary btn-block"
-                                data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Cancelar</button>
-                            </div>
-                        </div>
                     </div>
                     <div id="divBtnFrmPacienteInteres" class="row mb-4">
-                        <div class="col-3 offset-9">
-                            <button id="plus" type="button" class="btn btn-primary btn-block"
-                            data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i
+                        <div class="col-3 offset-6">
+                            <button type="button" class="btn btn-primary btn-block"
+                                id="btn_guardar_interes">Guardar</button>
+                        </div>
+                        <div class="col-3">
+                            <button id="plus" type="button" class="btn btn-primary btn-block" data-toggle="collapse"
+                                data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i
                                     class="fas fa-plus"></i> Agregar Intereses</button>
                         </div>
                     </div>

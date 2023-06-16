@@ -4,11 +4,11 @@ $(() => {
     });
 
     $('#btnAddPaciente').on('click', function(){
-        $('#pacienteId').val('');
+        $('#pacienteId').empty();
         selectPaciente();
-        selectMedio();
-        selectInteres();
-        selectPatologia();
+        //selectMedio();
+        //selectInteres();
+        //selectPatologia();
         $('#pacienteModalLabel').html('Nuevo Paciente');
         $('#pacienteModal').modal('show');
         $('#frmAgregarPaciente').trigger('reset');
@@ -105,7 +105,7 @@ function actualizarPaciente(id) {
         type: "POST",
         success: function (response) {
             $('#pacienteModalLabel').html('Editar Paciente');
-            $('#pacienteId').val(id);
+            $('#pacienteId').val(response.pacienteId.pacienteId);
             $('#personaId').val(response.pacienteId.personaId);
             $('#codPaciente').val(response.pacienteId.codPaciente);
             $('#estado').val(response.pacienteId.estado);
@@ -144,7 +144,7 @@ function eliminarPaciente(id) {
 }
 
 function selectPaciente() {
-    $('#personaId').empty();
+    //$('#personaId').empty();
     $.ajax({
         url: "nombrePaciente",
         type: "GET",
@@ -155,9 +155,7 @@ function selectPaciente() {
                 if (index == 0) {
                     let op = '<option value="0">Seleccione...</option>';
                     $('#personaId').append(op);
-                } else {
-
-                }
+                } 
                 let selectPaciente = `<option value="${value['personaId']}">${paciente.toUpperCase()} &nbsp;</option>`
                 $('#personaId').append(selectPaciente);   
             });
@@ -240,14 +238,11 @@ function selectMedio() {
         url: "nombreMedios",
         type: "GET",
         success: function (response) {
-
             $.each(response.medioId, function (index, value) {
                 if (index == 0) {
                     let op = '<option value="0">Seleccione...</option>';
                     $('#medioId').append(op);
-                } else {
-
-                }
+                } 
                 let selectMedio = `<option value="${value['medioId']}">${value['medio'].toUpperCase()} &nbsp;</option>`
                 $('#medioId').append(selectMedio);
             });
@@ -264,10 +259,12 @@ function mostrarMedios(pacienteId) {
         success: function (response) {
             let contenido = '';
             $.each(response.pacMedId, function (key, value) {
+                let date = value['fechaRegistro'];
+                let fechaRegistro = new Date(date).toLocaleDateString();
                 contenido += `<tr>
                             <td class="text-center">${(key + 1)}</td>
                             <td value="${value['medioId']}"><i class="fas fa-id-card"></i> &nbsp; &nbsp; ${value['medio'].toUpperCase()} </td>
-                            <td>&nbsp; &nbsp; ${value['fechaRegistro']} </td>
+                            <td>&nbsp; &nbsp; ${fechaRegistro} </td>
                             <td>
                                 <button type="button" onclick="actualizarPacMedios(${value['pacMedId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
                                 <button type="button" onclick="eliminarPacMedios(${value['pacMedId']}, ${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
@@ -345,29 +342,44 @@ function mostrarOcultarFormulario(frm, divBtn, mostrarOcultar) {
 
 /////////////////// FUNCIONALIDAD DE INTERESES///////////////////
 function pacInteres(pacienteId, paciente) {
-    //console.log(pacienteId);
-    
+    //$('#collapseExample').show();
+    $('#btn_guardar_interes').hide();
     $("#pacienteId-interes").val(pacienteId);
     $('#pacienteInteresModal').modal('show');
     $('#pacienteInteresModalLabel').html(`Intereses - Paciente: ${paciente}`);
-    hidePlus();
-    mostrarIntereses(pacienteId);
     
+    mostrarIntereses(pacienteId);
+    Plus();
+
     $('#btn_guardar_interes').on('click', function () {
         guardarPacienteIntereses(pacienteId);
+        $('#collapseExample').hide();
     })
    
     selectInteres();
 }
 
-function hidePlus(){
-    $('#plus').on('click', function(){
-        $(this).hide();
-    })
+function Plus() {
+    $('#plus').on('click', function () {
+        
+        if ($(this).hasClass('btn-primary')) {
+            $('#btn_guardar_interes').show();
+            $(this).removeClass('btn-primary');
+            $(this).addClass('btn-secondary');
+            $(this).text('Cancelar');
+            
+        } else {
+            $(this).removeClass('btn-secondary');
+            $(this).addClass('btn-primary');
+            $(this).text(' Agregar Intereses');
+            $('#btn_guardar_interes').hide();
+        }
+    });
 }
 
+
 function guardarPacienteIntereses(pacienteId) {
-    //console.log(pacienteId);
+    
     if (($('#interesId').val() == "")) {
         Swal.fire({
             title: 'Todos los datos son requeridos',
@@ -377,7 +389,6 @@ function guardarPacienteIntereses(pacienteId) {
             timer: 1500
         })
     } else {
-        //selectInteres();
         // Si el interesPacienteId  viene vacío es porque es agregar
         if ($('#interesPacienteId').val() == "") {
             url = "agregarPacInteres";
@@ -385,7 +396,7 @@ function guardarPacienteIntereses(pacienteId) {
                 interesId: $('#interesId').val(),
                 pacienteId: pacienteId,
             };
-            
+            console.log(data);
         } else {
             $('#error_paciente').empty();
             url = "actualizarPacInteres";
@@ -394,16 +405,15 @@ function guardarPacienteIntereses(pacienteId) {
                 interesId: $('#interesId').val(),
             }
         }
-
+        
         $.ajax({
             url: url,
             data: data,
             type: "POST",
             success: function (response) {
-                mostrarIntereses(pacienteId);
                 $('#pacienteInteresModal').modal('hide');
                 $('#pacienteInteresModal').find('input').val('');
-                
+                mostrarIntereses(pacienteId);
             }
         });
     }
@@ -438,7 +448,6 @@ function mostrarIntereses(pacienteId) {
                             <td class="text-center">${(key + 1)}</td>
                             <td value="${value['interesId']}"><i class="fas fa-id-card"></i> &nbsp; &nbsp; ${value['nombreInteres'].toUpperCase()} </td>
                             <td>
-                                <button type="button" onclick="actualizarPacInteres(${value['interesPacienteId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
                                 <button type="button" onclick="eliminarPacInteres(${value['interesPacienteId']}, ${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>`;
@@ -448,6 +457,7 @@ function mostrarIntereses(pacienteId) {
         }
     });
 }
+
 
 function eliminarPacInteres(id, pacienteId) {
     Swal.fire({
