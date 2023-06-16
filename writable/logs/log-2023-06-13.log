@@ -1,0 +1,587 @@
+ERROR - 2023-06-13 19:44:17 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:44:17 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:44:29 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:44:29 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:44:51 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:44:51 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:45:10 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('2')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:45:10 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('2')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:45:12 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:45:12 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:48:30 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:48:30 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:48:38 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:48:40 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:48:41 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:48:41 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:51:31 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 19:55:23 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:57:48 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:57:48 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:57:53 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:57:53 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 19:58:34 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 19:58:34 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 20:01:17 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 20:01:17 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-06-13 20:01:29 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 20:01:29 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('4')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:02:50 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-13 20:03:04 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('2')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-13 20:03:04 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('2')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:03:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:04:00 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:04:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:05:38 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:06:11 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:06:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:06:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:06:19 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:10:06 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:20:38 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:20:44 --> Undefined array key "nombres"
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombres"', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:23:23 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:23:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:23:29 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:25:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:15 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:22 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente('2')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:43 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 20:25:43 --> Uncaught ErrorException: file_get_contents(C:\xampp\htdocs\smiling\app\Views\errors\html\debug.js): Failed to open stream: No such file or directory in C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php:14
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 14)
+#1 C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php(14): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(266): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(269): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in APPPATH\Views\errors\html\error_exception.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-13 20:25:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:44 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 20:25:44 --> Uncaught ErrorException: file_get_contents(C:\xampp\htdocs\smiling\app\Views\errors\html\debug.js): Failed to open stream: No such file or directory in C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php:14
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 14)
+#1 C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php(14): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(266): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(269): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in APPPATH\Views\errors\html\error_exception.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-13 20:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:44 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 20:25:44 --> Uncaught ErrorException: file_get_contents(C:\xampp\htdocs\smiling\app\Views\errors\html\debug.js): Failed to open stream: No such file or directory in C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php:14
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 14)
+#1 C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php(14): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(266): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(269): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in APPPATH\Views\errors\html\error_exception.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-13 20:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:44 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 20:25:44 --> Uncaught ErrorException: file_get_contents(C:\xampp\htdocs\smiling\app\Views\errors\html\debug.js): Failed to open stream: No such file or directory in C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php:14
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 14)
+#1 C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php(14): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(266): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(269): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in APPPATH\Views\errors\html\error_exception.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-13 20:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:25:54 --> Array to string conversion
+in APPPATH\Models\SistemaModel.php on line 94.
+ 1 APPPATH\Models\SistemaModel.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\SistemaModel.php', 94)
+ 2 APPPATH\Controllers\Expediente\PacientesController.php(33): App\Models\SistemaModel->generarCodigoPaciente(null)
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->almacenar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-13 20:25:54 --> Uncaught ErrorException: file_get_contents(C:\xampp\htdocs\smiling\app\Views\errors\html\debug.js): Failed to open stream: No such file or directory in C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php:14
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 14)
+#1 C:\xampp\htdocs\smiling\app\Views\errors\html\error_exception.php(14): file_get_contents('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(266): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(269): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#4 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#6 {main}
+  thrown
+in APPPATH\Views\errors\html\error_exception.php on line 14.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-13 20:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-13 20:35:10 --> include(C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory
+in SYSTEMPATH\Debug\Toolbar.php on line 452.
+ 1 SYSTEMPATH\Debug\Toolbar.php(452): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\smiling\\vendor\\codeigniter4\\framework\\system\\Debug/Toolbar/Views/toolbarloader.js): Failed to open stream: No such file or directory', 'SYSTEMPATH\\Debug\\Toolbar.php', 452)
+ 2 SYSTEMPATH\Debug\Toolbar.php(452): include()
+ 3 APPPATH\Config\Events.php(46): CodeIgniter\Debug\Toolbar->respond()
+ 4 SYSTEMPATH\Events\Events.php(149): CodeIgniter\Events\Events::Config\{closure}()
+ 5 SYSTEMPATH\CodeIgniter.php(350): CodeIgniter\Events\Events::trigger('pre_system')
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-13 20:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-13 20:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

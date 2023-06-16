@@ -93,6 +93,10 @@ $routes->group('expediente', ['namespace' => 'App\Controllers\Expediente', 'filt
     $routes->add('mostrarPacMedios', 'PacientesMediosController::buscar');
     $routes->add('obtenerPacMediosId', 'PacientesMediosController::obtenerId');
     $routes->post('eliminarPacMedios', 'PacientesMediosController::eliminar');
+
+    //3. Paciente Intereses
+    $routes->add('mostrarPacInteres', 'PacientesInteresController::buscar');
+    $routes->add('agregarPacInteres', 'PacientesInteresController::almacenar');
 });
 
 // Definiendo grupos para los de tipo Admin

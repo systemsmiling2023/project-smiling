@@ -38,19 +38,6 @@
                             <form class="form">
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <label>Código</label>
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="fas fa-user"></i>
-                                                </div>
-                                            </div>
-                                            <input type="hidden" id="pacienteId" name="pacienteId" readonly>
-                                            <input type="date" class="form-control" id="codPaciente" name="codPaciente"
-                                                style="text-transform:uppercase">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
                                         <label>Paciente</label>
                                         <div class="input-group mb-2">
                                             <div class="input-group-prepend">
@@ -58,8 +45,24 @@
                                                     <i class="fas fa-users"></i>
                                                 </div>
                                             </div>
-                                            <select class="form-control" name="pacienteId" id="pacienteId"
+                                            <input type="hidden" id="pacienteId" name="pacienteId" readonly>
+                                            <select class="form-control" name="personaId" id="personaId"
                                                 style="text-transform:uppercase">
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <label>Estado</label>
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i class="fas fa-toggle-on"></i>
+                                                </div>
+                                            </div>
+                                            <select name="estado" id="estado" class="form-control"
+                                                style="text-transform:uppercase">
+                                                <option value="1">ACTIVO</option>
+                                                <option value="0">INACTIVO</option>
                                             </select>
                                         </div>
                                     </div>
@@ -110,24 +113,12 @@
                                                     <i class="fas fa-calendar"></i>
                                                 </div>
                                             </div>
-                                            <input type="date" class="form-control" id="responsableId"
+                                            <input type="text" class="form-control" id="responsableId"
                                                 name="responsableId" style="text-transform:uppercase">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
-                                        <label>Estado</label>
-                                        <div class="input-group mb-2">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <i class="fas fa-toggle-on"></i>
-                                                </div>
-                                            </div>
-                                            <select name="estado" id="estado" class="form-control"
-                                                style="text-transform:uppercase">
-                                                <option value="1">ACTIVO</option>
-                                                <option value="0">INACTIVO</option>
-                                            </select>
-                                        </div>
+
                                     </div>
                                 </div>
                             </form>
@@ -148,6 +139,6 @@
 <!-- JavaScript -->
 <script src="<?= base_url('public/sweetalert2.all.min.js') ?>"></script>
 <script src="<?= base_url('/public/select2/js/select2.min.js') ?>"></script>
-
+<script src="<?= base_url('/assets/js/paciente.js') ?>"></script>
 
 <?= $this->endSection() ?>

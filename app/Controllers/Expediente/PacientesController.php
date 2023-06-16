@@ -27,11 +27,18 @@ class PacientesController extends BaseController
     public function almacenar()
     {
         $paciente = new PacienteModel();
+     
+        $personaId = $this->request->getPost('personaId');
+        
+        $sistemaModel = new SistemaModel();
+        $codigoPaciente = $sistemaModel->generarCodigoPaciente($personaId);
+
         $data = [
-            'codPaciente' => $this->request->getPost('codPaciente'),
             'estado' => $this->request->getPost('estado'),
-            'personaId' => $this->request->getPost('personaId')
+            'personaId' => $this->request->getPost('personaId'),
+            'codPaciente' => $codigoPaciente,
         ];
+        
         $paciente->guardarPaciente($data);
         
         return $paciente;

@@ -62,6 +62,8 @@
 
 <?= $this->include('modals/modal_paciente') ?>
 <?= $this->include('modals/modal_paciente_medios')?>
+<?= $this->include('modals/modal_paciente_interes')?>
+
 
 <?= $this->endSection() ?>
 

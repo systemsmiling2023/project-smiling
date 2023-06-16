@@ -6,8 +6,8 @@ $(() => {
     $('#btnAddPaciente').on('click', function(){
         $('#pacienteId').val('');
         selectPaciente();
-        selectMedio();
-        selectInteres();
+        //selectMedio();
+        //selectInteres();
         selectPatologia();
         $('#pacienteModalLabel').html('Nuevo Paciente');
         $('#pacienteModal').modal('show');
@@ -22,7 +22,7 @@ $(() => {
 
 // GUARDAR PACIENTE
 function guardarPaciente() {
-    if (($('#personaId').val() == "") || ($('#codPaciente').val() == "") || ($('#estado').val() == "")) {
+    if (($('#personaId').val() == "") || ($('#estado').val() == "")) {
         Swal.fire({
             title: 'Todos los datos son requeridos',
             text: "Vuelva a intentarlo!",
@@ -36,9 +36,9 @@ function guardarPaciente() {
             url = "almacenarPaciente";
             data = {
                 personaId: $('#personaId').val(),
-                codPaciente: $('#codPaciente').val(),
                 estado: $('#estado').val(),
             };
+            
         } else {
             $('#error_paciente').empty();
             url = "actualizarPaciente";
@@ -87,6 +87,7 @@ function mostrarPaciente() {
                             <button id="btnActualizar" onclick="actualizarPaciente(${value['pacienteId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
                             <button onclick="eliminarPaciente(${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
                             <button onclick="pacMedios(${value['pacienteId']}, '${paciente}')" class="btn btn-outline-info btn-sm" title="Medios"><i class="fas fa-globe"></i></button>
+                            <button onclick="pacInteres(${value['pacienteId']}, '${paciente}')" class="btn btn-outline-info btn-sm" title="Interes"><i class="fas fa-heart"></i></button>
                         </td>
                     </tr>`;
 
@@ -103,7 +104,7 @@ function actualizarPaciente(id) {
         data: { id: id },
         type: "POST",
         success: function (response) {
-            $('#empleadoModalLabel').html('Editar Paciente');
+            $('#pacienteModalLabel').html('Editar Paciente');
             $('#pacienteId').val(id);
             $('#personaId').val(response.pacienteId.personaId);
             $('#codPaciente').val(response.pacienteId.codPaciente);
@@ -160,46 +161,14 @@ function selectPaciente() {
                 let selectPaciente = `<option value="${value['personaId']}">${paciente.toUpperCase()} &nbsp;</option>`
                 $('#personaId').append(selectPaciente);   
             });
-            $('#personaId').on('change', function() {
-                generarCodigoPaciente();
-            });
         }
     });
 }
 
-function generarCodigoPaciente() {
-    // Obtener los valores seleccionados y el año actual
-    var nombre = $('#personaId option:selected').text().trim();
-    var apellido = nombre.split(' ')[2];
-    var anio = new Date().getFullYear();
-
-    // Hacer mayúscula la inicial del nombre y primer apellido
-    var codigo = nombre[0].toUpperCase() + apellido[0].toUpperCase();
-
-    // Obtener el número correlativo
-    var numeroCorrelativo = obtenerNumeroCorrelativo();
-
-    // Concatenar el código con el año y el número correlativo
-    codigo += anio + numeroCorrelativo;
-
-    // Asignar el código al campo correspondiente
-    $('#codPaciente').val(codigo);
-}
-
-function obtenerNumeroCorrelativo() {
-    
-    // Generar un número aleatorio entre 1 y 999
-    var numero = Math.floor(Math.random() * 999) + 1;
-
-    // Formatear el número como tres dígitos (ejemplo: 001)
-    var numeroFormateado = ('00' + numero).slice(-3);
-
-    return numeroFormateado;
-}
 
 /////////////////// FUNCIONALIDAD DE MEDIOS///////////////////
 function pacMedios(pacienteId, paciente) {
-    console.log(pacienteId);
+    //console.log(pacienteId);
     $("#pacienteId-medios").val(pacienteId);
     $('#pacienteMediosModal').modal('show');
     $('#pacienteMediosModalLabel').html(`Medios - Paciente: ${paciente}`);
@@ -207,7 +176,7 @@ function pacMedios(pacienteId, paciente) {
     mostrarOcultarFormulario('frmPacienteMedios', 'divBtnFrmPacienteMedios', 'ocultar');
     mostrarMedios(pacienteId);
 
-    $('#btn_guardar_medios').on('click', function () {
+    $('#btn_guardar_medios').off('click').on('click', function () {
         guardarPacienteMedios(pacienteId);
     });
     
@@ -367,13 +336,69 @@ function mostrarOcultarFormulario(frm, divBtn, mostrarOcultar) {
         $(`#${divBtn}`).hide();
     } else {
         // Ocultar
-        //$('#frmPersonaContactos').trigger('reset');
         $('#frmPacienteMedios').trigger('reset');
-        //$('#valorContacto').val('');
-        $('#valorDocumento').val('');
         $(`#${frm}`).hide();
         $(`#${divBtn}`).show();
-        $("#accionMedios").val('agregar');
+        //$("#accionMedios").val('agregar');
+    }
+}
+
+/////////////////// FUNCIONALIDAD DE INTERESES///////////////////
+function pacInteres(pacienteId, paciente) {
+    //console.log(pacienteId);
+    
+    $("#pacienteId-interes").val(pacienteId);
+    $('#pacienteInteresModal').modal('show');
+    $('#pacienteInteresModalLabel').html(`Intereses - Paciente: ${paciente}`);
+    
+    mostrarIntereses(pacienteId);
+    
+    $('#btn_guardar_interes').on('click', function () {
+        $(this).html('Procesando...');
+        guardarPacienteIntereses(pacienteId);
+    })
+   
+    selectInteres();
+}
+
+function guardarPacienteIntereses(pacienteId) {
+    if (($('#interesId').val() == "")) {
+        Swal.fire({
+            title: 'Todos los datos son requeridos',
+            text: "Vuelva a intentarlo!",
+            icon: 'warning',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    } else {
+        // Si el interesPacienteId  viene vacío es porque es agregar
+        if ($('#interesPacienteId').val() == "") {
+            url = "agregarPacInteres";
+            data = {
+                interesId: $('#interesId').val(),
+                pacienteId: pacienteId,
+            };
+            
+        } else {
+            $('#error_paciente').empty();
+            url = "actualizarPaciente";
+            data = {
+                id: $('#interesPacienteId').val(),
+                interesId: $('#interesId').val(),
+            }
+        }
+
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (response) {
+                $('#pacienteInteresModal').modal('hide');
+                $('#pacienteInteresModal').find('input').val('');
+                
+                mostrarIntereses(pacienteId);
+            }
+        });
     }
 }
 
@@ -394,6 +419,30 @@ function selectInteres() {
                 let selectInteres = `<option value="${value['interesId']}">${value['nombreInteres'].toUpperCase()} &nbsp;</option>`
                 $('#interesId').append(selectInteres);
             });
+        }
+    });
+}
+
+function mostrarIntereses(pacienteId) {
+    $('#bodyPacienteInteres').html('');
+    $.ajax({
+        type: "POST",
+        data: { id: pacienteId },
+        url: "mostrarPacInteres",
+        success: function (response) {
+            let contenido = '';
+            $.each(response.interesPacienteId, function (key, value) {
+                contenido += `<tr>
+                            <td class="text-center">${(key + 1)}</td>
+                            <td value="${value['interesId']}"><i class="fas fa-id-card"></i> &nbsp; &nbsp; ${value['nombreInteres'].toUpperCase()} </td>
+                            <td>
+                                <button type="button" onclick="actualizarPacMedios(${value['interesPacienteId']})" class="btn btn-outline-primary btn-sm" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+                                <button type="button" onclick="eliminarPacMedios(${value['interesPacienteId']}, ${value['pacienteId']})" class="btn btn-outline-danger btn-sm" title="Borrar"><i class="fas fa-trash-alt"></i></button>
+                            </td>
+                        </tr>`;
+            });
+            $('#bodyPacienteInteres').html(contenido);
+            //console.log(pacienteId);
         }
     });
 }

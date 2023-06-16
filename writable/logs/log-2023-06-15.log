@@ -1,0 +1,23 @@
+ERROR - 2023-06-15 10:13:52 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION) in C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM `ex...', 0)
+#1 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `ex...')
+#2 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `ex...')
+#3 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex...', Array, false)
+#4 C:\xampp\htdocs\smiling\app\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete(Array)
+#5 C:\xampp\htdocs\smiling\app\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+#6 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+#7 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+#8 C:\xampp\htdocs\smiling\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\smiling\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2023-06-15 10:13:52 --> Cannot delete or update a parent row: a foreign key constraint fails (`smiling`.`co_paciente_medio`, CONSTRAINT `FK_PAC_MED` FOREIGN KEY (`pacienteId`) REFERENCES `ex_pacientes` (`pacienteId`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2777): CodeIgniter\Database\BaseConnection->query('DELETE FROM `ex_pacientes`
+WHERE `pacienteId` = :pacienteId:', [...], false)
+ 2 APPPATH\Models\Expediente\PacienteModel.php(24): CodeIgniter\Database\BaseBuilder->delete([...])
+ 3 APPPATH\Controllers\Expediente\PacientesController.php(63): App\Models\Expediente\PacienteModel->eliminarPaciente('3')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Expediente\PacientesController->eliminar()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Expediente\PacientesController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

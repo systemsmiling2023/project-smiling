@@ -3,6 +3,8 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Models\Expediente\PacienteModel;
+use App\Models\Configuracion\PersonasModel;
 
 class SistemaModel extends Model
 {
@@ -82,5 +84,26 @@ class SistemaModel extends Model
         }else{
             return true;
         }
+    }
+
+    public function generarCodigoPaciente($personaId)
+    {
+        $personasModel = new PersonasModel();
+        $personas = $personasModel->find($personaId);
+        $nombres = $personas['nombres'];
+        $primerApellido = $personas['primerApellido'];
+
+        $iniciales = substr($nombres, 0, 1) . substr($primerApellido, 0, 1);
+
+        $anioActual = date('y');
+        $codigoParcial = $iniciales . $anioActual;
+
+        $exPacientesModel = new PacienteModel();
+        $count = $exPacientesModel->like('codPaciente', $codigoParcial, 'after')->countAllResults();
+
+        $correlativo = $count + 1;
+        $codigoPaciente = $codigoParcial . $correlativo;
+
+        return $codigoPaciente;
     }
 }
